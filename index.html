@@ -17,6 +17,7 @@
                <li><a href="#header">Home</a></li>
                <li><a href="#profile">Profile</a></li>
                <li><a href="#work">Work</a></li>
+               <li><a href="#gallery">Gallery</a></li>
                <li><a href="#contact">Contact</a></li>
            </ul>
            <button class="nav__toggle-btn">toggle</button>
@@ -39,13 +40,15 @@
             </div>
             <!-- container -->
         </header>
-        <!-- main -->
-        <main id="main">
+    </div>
+    <!-- main -->
+    <main id="main">
+            <div class="wrap-1200">
 
             <!-- profile -->
             <section class="category-section" id="profile">
-                <h2 class="category-title"> profile</h2>
-                <div class="box_profile">
+                <h2 class="category-title"> Profile</h2>
+                <div class="box-component box_profile">
                         <div class="box_profile__row">
                                 <div class="profile__photo bg-color"></div>
                                 <div class="profile__headline bg-color">
@@ -62,8 +65,8 @@
 
             <!-- work -->
             <section class="category-section" id="work">
-                <h2 class="category-title"> work</h2>
-                    <div class="box_work">
+                <h2 class="category-title"> Work</h2>
+                    <div class="box-component box_work">
                         <div class="box_work__row">
                             <div class="work__thumbnail bg-color"></div>
                         </div>
@@ -75,7 +78,7 @@
                         </div>
                     </div>
                     <!-- 1. box_work -->
-                    <div class="box_work">
+                    <div class="box-component box_work">
                         <div class="box_work__row">
                             <div class="work__thumbnail bg-color"></div>
                         </div>
@@ -87,7 +90,7 @@
                         </div>
                     </div>
                     <!-- 2. box_work -->
-                    <div class="box_work">
+                    <div class="box-component box_work">
                         <div class="box_work__row">
                             <div class="work__thumbnail bg-color"></div>
                         </div>
@@ -99,22 +102,100 @@
                         </div>
                     </div>
                     <!-- 3. box_work -->
+                    <div class="box-component box_work">
+                        <div class="box_work__row">
+                            <div class="work__thumbnail bg-color"></div>
+                        </div>
+                        <div class="box_work__row">
+                            <div class="work__info">
+                                <div class="work__introduction bg-color"></div>
+                                <button class="work__btn-view">view</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. box_work -->
+                    <div class="box-component box_work">
+                        <div class="box_work__row">
+                            <div class="work__thumbnail bg-color"></div>
+                        </div>
+                        <div class="box_work__row">
+                            <div class="work__info">
+                                <div class="work__introduction bg-color"></div>
+                                <button class="work__btn-view">view</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5. box_work -->
                     
             </section>
-
-            <!-- contact -->
-            <section class="category-section" id="contact">
-                   <div class="box_contact">
-                        <h2 class="category-title"> contact me</h2>
-                       <div class="contact__form bg-color"></div>
-                       <address class="contact__address bg-color"></address>
-                   </div>
-                   <!-- box_contact -->
-                <div class="choco-img bg-color"></div>
+            <!-- gallery -->
+            <section class="category-section" id="gallery">
+                <h2 class="category-title"> Gallery</h2>
+                <div class="box_gallery">
+                    <div class="box_gallery_row">
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일1">
+                            </a>
+                        </div>
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일2">
+                            </a>
+                        </div>
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일3">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- box_gallery_row -->
+                    
+                    <div class="box_gallery_row">
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일4">
+                            </a>
+                        </div>
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일5">
+                            </a>
+                        </div>
+                        <div class="gallery__thumbnail">
+                            <a href="#">
+                                <img src="#" alt="갤러리_썸네일6">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- box_gallery_row -->
+                </div>
+                <!-- box_gallery -->
             </section>
-        </main>
-    </div>
-    <!-- wrap 1200 -->
+
+        </div>
+        <!-- wrap 1200 -->
+
+        <!-- contact -->
+        <div class="wrap__contact">
+            <div class="choco-img bg-color"></div>
+                <!-- contact -->
+                <section class="category-section" id="contact">
+                    <div class="box-component box_contact">
+                         <h2 class="category-title"> contact me</h2>
+                        <div class="contact__form bg-color"></div>
+                        <address class="contact__address bg-color"></address>
+                    </div>
+                    <!-- box_contact -->>
+             </section>
+        </div>
+        <!-- wrap-contact -->
+    </main>
+
+
+
+
+                 
     <footer id="footer">
             footer
     </footer>

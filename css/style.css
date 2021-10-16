@@ -40,7 +40,7 @@ body {
   box-sizing: border-box;
   float: right;
   height: 5rem;
-  padding-right: 180px;
+  padding-right: 100px;
   padding-top: 2rem;
   background-color: slategray;
 }
@@ -127,13 +127,16 @@ body {
   line-height: 1.6;
   margin-bottom: 54px;
 }
+.box-component {
+  width: 1180px;
+  margin: 0 10px;
+  background-color: white;
+}
 /* profile */
 #profile {
   background-color: thistle;
 }
 .box_profile {
-  width: 1180px;
-  margin: 0 10px;
   height: 700px;
   background-color: white;
 }
@@ -188,10 +191,7 @@ body {
   background-color: tomato;
 }
 .box_work {
-  width:1180px;
-  margin: 0 10px;
   height: 350px;
-  background-color: white;
 }
 .box_work:first-child {
   margin-top: 54px;
@@ -237,20 +237,57 @@ body {
   margin-top: 25px;
 }
 
+/* gallery */
+.box_gallery {
+  width: 1200px;
+  padding: 0 110px;
+}
+.box_gallery_row {
+  width: 100%;
+}
+.box_gallery_row:not(:first-child) {
+  margin-top: 65px;
+}
+.box_gallery_row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.gallery__thumbnail {
+  width: 300px;
+  height: 300px;
+  background-color: blueviolet;
+  float: left;
+}
+.gallery__thumbnail:not(:first-child) {
+  margin-left: 30px;
+}
 /* contact */
+.wrap__contact {
+  position: relative;
+  width: 100%;
+}
 #contact {
   position: relative;
+  width: 1200px;
+  margin: 0 auto;
   background-color: yellowgreen;
-  overflow: hidden;
   padding-bottom: 0;
+}
+.choco-img {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(120%, -50%);
+  width: 200px;
+  height: 404px;
+  z-index: 9;
 }
 
 .box_contact {
   position: relative;
-  width: 1180px;
   margin: 10px;
   height: 666px;
-  background-color: white;
   padding: 40px 0;
   overflow: visible;
   z-index: 2;
@@ -263,24 +300,7 @@ body {
   width: 500px;
   height: 400px;
 }
-.contact__address {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 200px;
-  height: 150px;
-}
 
-.choco-img {
-  position: absolute;
-  left:0;
-  top:50%;
-  transform: translate(-50%, -50%);
-  width:200px;
-  height: 404px;
-  z-index: 9;
-}
 /* footer */
 #footer {
   width: 100%;
