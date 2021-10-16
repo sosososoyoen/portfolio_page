@@ -118,16 +118,6 @@ body {
   height: max-content;
   padding-bottom: 90px;
 }
-.content-box {
-  box-sizing: content-box;
-  width: 1180px;
-  margin: 0 auto;
-  padding: 0 10px;
-  height: max-content;
-  background-color: turquoise;
-  padding-top: 54px;
-  padding-bottom: 94px;
-}
 .category-header {
   margin: 0 auto;
 }
@@ -135,12 +125,15 @@ body {
   font-size: 36px;
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 54px;
 }
 /* profile */
 #profile {
   background-color: thistle;
 }
 .box_profile {
+  width: 1180px;
+  margin: 0 10px;
   height: 700px;
   background-color: white;
 }
@@ -160,14 +153,11 @@ body {
 .bg-color {
   background: midnightblue;
 }
-.profile__greeting {
-  padding: 23px 0;
-}
 .profile__photo {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 23px auto;
 }
 .profile__headline {
   width: 320px;
@@ -198,8 +188,13 @@ body {
   background-color: tomato;
 }
 .box_work {
+  width:1180px;
+  margin: 0 10px;
   height: 350px;
   background-color: white;
+}
+.box_work:first-child {
+  margin-top: 54px;
 }
 .box_work:not(:last-child) {
   margin-bottom: 72px;
@@ -252,9 +247,13 @@ body {
 
 .box_contact {
   position: relative;
+  width: 1180px;
+  margin: 10px;
   height: 666px;
   background-color: white;
-  padding: 40px;
+  padding: 40px 0;
+  overflow: visible;
+  z-index: 2;
 }
 .contact__form {
   position: absolute;
@@ -273,6 +272,15 @@ body {
   height: 150px;
 }
 
+.choco-img {
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width:200px;
+  height: 404px;
+  z-index: 9;
+}
 /* footer */
 #footer {
   width: 100%;
