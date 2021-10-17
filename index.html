@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>포트폴리오 페이지</title>
 </head>
 <body>
     <!-- #site-nav -->
-    <nav id="nav">
+    <nav id="nav" class="nav_shadow">
         <div class="container">
-            <div class="nav__logo">logo</div>
+            <div class="nav__logo">
+                <a href="#header" class="logo_link">
+                    <img src="./img/logo.png" alt="로고이미지" class="logo_img">
+                </a>
+            </div>
            <ul class="nav__menu">
-               <li><a href="#header">Home</a></li>
+               <li><a href="#header" class="current-menu">Home</a></li>
                <li><a href="#profile">Profile</a></li>
                <li><a href="#work">Work</a></li>
                <li><a href="#gallery">Gallery</a></li>
@@ -30,13 +35,18 @@
     <div class="wrap-1200">
         <!-- #header -->
         <header id="header">
-            header
             <div class="container">
-                <div class="title_photo">title_photo</div>
+                <div class="title_photo">
+                    <img src="./img/title_img.png" alt="타이틀_이미지">
+                </div>
                 <hgroup class="home-title">
-                    <h1>타이틀</h1>
+                    <h2 class="main-title title__first">Design</h2>
+                    <h2 class="main-title title__second">Growth.</h2>
+                    <h1 class="sub-title">항상 배움의 자세로 성장하는 퍼블리셔</h1>
                 </hgroup>
-                <button class="btn_go-to-work">see my work</button>
+                <button class="btn_go-to-work">
+                    <span> SEE MY WORK</span>
+                </button>
             </div>
             <!-- container -->
         </header>

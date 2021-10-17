@@ -1,11 +1,17 @@
+:root {
+  --text-purple: #9d5cbb;
+  --text-gray: #71787d;
+}
+
 body {
   min-width: 1200px;
+  font-family: "NEXON Lv2 Gothic", sans-serif;
   list-style: none;
   background: rgb(219, 233, 246);
   background: linear-gradient(
     180deg,
     rgba(219, 233, 246, 1) 0%,
-    rgba(254, 252, 201, 1) 46%,
+    rgba(254, 252, 201, 1) 44%,
     rgba(247, 208, 213, 1) 100%
   );
 }
@@ -17,6 +23,10 @@ body {
   height: 5rem;
   background-color: white;
   z-index: 999;
+}
+.nav_shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #nav > .container {
   position: relative;
@@ -30,29 +40,53 @@ body {
 }
 .nav__logo {
   box-sizing: content-box;
-  width: 100px;
+  width: 6.25rem;
   height: 5rem;
   float: left;
-  padding-left: 78px;
-  background-color: slateblue;
 }
+.logo_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.781rem 0;
+}
+
 .nav__menu {
-  box-sizing: border-box;
   float: right;
   height: 5rem;
-  padding-right: 100px;
-  padding-top: 2rem;
-  background-color: slategray;
+  padding-top: 20px;
 }
+
 .nav__menu > li {
   float: left;
+  width: 20%;
+  height: 100%;
+  vertical-align: baseline;
 }
 .nav__menu > li > a {
+  position: relative;
   display: block;
-  width: 25%;
-  padding: 0 20px;
-  line-height: 1em;
+  font-family: "NEXON Lv2 Gothic Bold";
+  color: var(--text-gray);
+  text-decoration: none;
+  text-align: center;
   font-size: 20px;
+  margin: 0 2.1em;
+  line-height: 2em;
+}
+.nav__menu > li > a.current-menu {
+  color: var(--text-purple);
+}
+.current-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-purple);
 }
 /* nav - toggle btn */
 .nav__toggle-btn {
@@ -77,7 +111,6 @@ body {
   height: 100vh;
   min-height: 20rem;
   padding-top: 100px;
-  background-color: aquamarine;
 }
 #header > .container {
   position: absolute;
@@ -86,25 +119,77 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: steelblue;
 }
 .home-title {
   width: 47%;
   height: 330px;
   float: left;
-  background-color: tomato;
+}
+.main-title {
+  font-family: "SBAggroB";
+  font-size: 100px;
+  letter-spacing: 0.025em;
+  line-height: 1.1;
+}
+.title__first::first-letter {
+  font-size: 136px;
+}
+.title__first {
+  background: rgb(151, 89, 187);
+  background: linear-gradient(
+    -154deg,
+    rgba(151, 89, 187, 1) 20%,
+    rgba(252, 166, 198, 1) 60%,
+    rgba(246, 175, 151, 1) 80%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.title__second {
+  background: rgb(246, 175, 151);
+  background: linear-gradient(
+    -155deg,
+    rgba(246, 175, 151, 1) 25%,
+    rgba(252, 166, 198, 1) 51%,
+    rgba(151, 89, 187, 1) 70%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.sub-title {
+  font-family: "SBAggroL";
+  line-height: 5em;
+  font-size: 24px;
+  color: var(--text-purple);
+  margin-left: 1em;
 }
 .title_photo {
   float: right;
-  width: 53%;
-  height: 500px;
-  background-color: yellowgreen;
 }
 .btn_go-to-work {
   width: 237px;
   height: 68px;
   border-radius: 30px;
   margin-top: 80px;
+  border: none;
+  cursor: pointer;
+  background: rgb(159, 139, 224);
+  background: linear-gradient(
+    127deg,
+    rgba(159, 139, 224, 1) 0%,
+    rgba(250, 174, 202, 1) 61%,
+    rgba(254, 208, 193, 1) 96%
+  );
+  box-shadow: rgba(242, 170, 204, 0.4) 0px 19px 38px,
+    rgba(242, 170, 204, 0.2) 0px 10px 8px;
+}
+.btn_go-to-work > span {
+  line-height: 68px;
+  font-family: "NEXON Lv2 Gothic";
+  color: white;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
 }
 
 /* main */
@@ -276,9 +361,9 @@ body {
 }
 .choco-img {
   position: absolute;
-  left: 0%;
+  left: 21.875rem;
   top: 50%;
-  transform: translate(120%, -50%);
+  transform: translate(-1.094rem, -50%);
   width: 200px;
   height: 404px;
   z-index: 9;
