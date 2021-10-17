@@ -1,6 +1,8 @@
 :root {
   --text-purple: #9d5cbb;
   --text-gray: #71787d;
+  --text-navy: #02253b;
+  --purple: #9885d7;
 }
 
 body {
@@ -203,27 +205,44 @@ body {
   height: max-content;
   padding-bottom: 90px;
 }
-.category-header {
-  margin: 0 auto;
-}
 .category-title {
-  font-size: 36px;
+  position: relative;
   text-align: center;
+  font-family: "SBAggroB";
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
   line-height: 1.6;
+  color: var(--text-navy);
   margin-bottom: 54px;
+}
+.category-title::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  width: 34px;
+  height: 4px;
+  background-color: var(--purple);
 }
 .box-component {
   width: 1180px;
   margin: 0 10px;
-  background-color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgb(255, 255, 255);
 }
 /* profile */
-#profile {
-  background-color: thistle;
-}
 .box_profile {
   height: 700px;
-  background-color: white;
 }
 .box_profile__row {
   height: 100%;
@@ -232,11 +251,9 @@ body {
 }
 .box_profile__row:first-child {
   width: 40%;
-  background: coral;
 }
 .box_profile__row:last-child {
   width: 60%;
-  background: lightpink;
 }
 .bg-color {
   background: midnightblue;
@@ -246,6 +263,8 @@ body {
   height: 250px;
   border-radius: 50%;
   margin: 23px auto;
+  background-color: var(--purple);
+  box-shadow: rgba(152, 133, 215, 0.6) 0px 7px 29px 0px;
 }
 .profile__headline {
   width: 320px;
@@ -272,9 +291,6 @@ body {
   float: right;
 }
 /* work */
-#work {
-  background-color: tomato;
-}
 .box_work {
   height: 350px;
 }
@@ -291,7 +307,6 @@ body {
 }
 .box_work__row:first-child {
   width: 42%;
-  background-color: thistle;
 }
 .box_work__row:last-child {
   width: 58%;
@@ -361,9 +376,9 @@ body {
 }
 .choco-img {
   position: absolute;
-  left: 21.875rem;
+  left: 250px;
   top: 50%;
-  transform: translate(-1.094rem, -50%);
+  transform: translate(0, -50%);
   width: 200px;
   height: 404px;
   z-index: 9;
