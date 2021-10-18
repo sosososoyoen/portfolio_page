@@ -528,6 +528,7 @@ body {
   float: right;
 }
 .address__subtitle {
+  display: block;
   font-family: "NEXON Lv2 Gothic Bold";
   color: var(--purple);
   font-size: 24px;
