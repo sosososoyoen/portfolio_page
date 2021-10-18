@@ -8,11 +8,12 @@
 body {
   min-width: 1200px;
   font-family: "NEXON Lv2 Gothic", sans-serif;
+  color: var(--text-navy);
   list-style: none;
   background: rgb(219, 233, 246);
   background: linear-gradient(
     180deg,
-    rgba(219, 233, 246, 1) 0%,
+    rgba(219, 233, 246, 1) 15%,
     rgba(254, 252, 201, 1) 44%,
     rgba(247, 208, 213, 1) 100%
   );
@@ -23,10 +24,10 @@ body {
   position: fixed;
   width: 100%;
   height: 5rem;
-  background-color: white;
   z-index: 999;
 }
-.nav_shadow {
+.nav_fixed {
+  background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -213,7 +214,6 @@ body {
   margin: 0 auto;
   font-size: 2em;
   line-height: 1.6;
-  color: var(--text-navy);
   margin-bottom: 54px;
 }
 .category-title::after {
@@ -271,24 +271,97 @@ body {
   height: 170px;
   margin: 62px auto;
 }
+.greeting {
+  font-family: "NEXON Lv2 Gothic Bold";
+  color: var(--text-purple);
+  font-size: 3em;
+  line-height: 1.2em;
+}
 .profile__introduction {
   margin-top: 23px;
   float: left;
-  width: 320px;
+  width: 380px;
   height: 300px;
+  padding: 3em 0;
+  line-height: 1.4;
+}
+.profile__introduction > span {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
 }
 .profile__info {
   float: right;
-  width: 320px;
+  width: 200px;
   height: 300px;
   margin-top: 23px;
-  margin-left: 30px;
+  padding-top: 3em;
+  margin-right: 30px;
+}
+.profile__info > p {
+  display: block;
+  line-height: 1.3;
+}
+.profile__info > p:not(:first-child) {
+  margin-top: 1.2em;
+}
+.profile__info > p > span {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
 }
 .profile__skill {
   width: 470px;
   height: 220px;
   margin-top: 90px;
   float: right;
+}
+.profile__skill > h3 {
+  position: relative;
+  width: max-content;
+  font-family: "SBAggroB";
+  font-size: 18px;
+  color: var(--text-navy);
+  line-height: 1.2;
+}
+.profile__skill > h3::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--purple);
+}
+.profile__skill-icon > img {
+  float: left;
+  margin-right: 48px;
+  margin-top: 26px;
+}
+.profile__skill-icon > img:first-child {
+  filter: drop-shadow(2px 6px 10px rgba(240, 102, 43, 0.5));
+}
+.profile__skill-icon > img:nth-child(2) {
+  filter: drop-shadow(2px 6px 10px rgba(43, 69, 218, 0.5));
+}
+.profile__skill-icon > img:nth-child(3) {
+  filter: drop-shadow(2px 6px 10px rgb(247, 223, 30, 0.5));
+}
+.profile__skill-icon > img:nth-child(4) {
+  filter: drop-shadow(2px 6px 10px rgba(86, 139, 173, 0.35));
+}
+.profile__skill-icon > img:nth-child(5) {
+  filter: drop-shadow(2px 6px 10px rgba(86, 140, 174, 0.5));
+}
+.profile__skill-icon > img:nth-child(6) {
+  filter: drop-shadow(2px 6px 10px rgb(51, 0, 0, 0.5));
+}
+.profile__skill-icon > img:nth-child(7) {
+  filter: drop-shadow(2px 6px 10px rgba(43, 149, 151, 0.3));
+}
+.profile__skill-icon > img:nth-child(8) {
+  filter: drop-shadow(2px 6px 10px rgba(70, 3, 3, 0.5));
 }
 /* work */
 .box_work {
@@ -313,10 +386,12 @@ body {
   position: relative;
 }
 .work__thumbnail {
+  display: block;
   width: 400px;
   height: 250px;
   border-radius: 10px;
   margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 .work__info {
   position: absolute;
@@ -326,15 +401,38 @@ body {
 }
 .work__introduction {
   width: 480px;
-  height: 168px;
   margin: 0 auto;
+}
+.work__introduction > h3 {
+  font-family: "NEXON Lv2 Gothic Bold";
+  font-size: 1.875em;
+}
+.work__introduction > p {
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 1.2em 0;
 }
 .work__btn-view {
   width: 100px;
   height: 34px;
   border-radius: 16px;
-  margin: auto;
-  margin-top: 25px;
+  border: none;
+  margin: 0.9em auto;
+  background: rgb(151, 89, 187);
+  background: linear-gradient(
+    -100deg,
+    rgba(151, 89, 187, 1) 10%,
+    rgba(252, 166, 198, 1) 60%,
+    rgba(246, 175, 151, 1) 80%
+  );
+  cursor: pointer;
+  box-shadow: rgba(252, 166, 198, 0.6) 3px 10px 20px 0px;
+  /* 텍스트 */
+  font-family: "NEXON Lv2 Gothic Bold";
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
 }
 
 /* gallery */
@@ -356,8 +454,12 @@ body {
 .gallery__thumbnail {
   width: 300px;
   height: 300px;
-  background-color: blueviolet;
   float: left;
+}
+.gallery__thumbnail > a > img {
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 80px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .gallery__thumbnail:not(:first-child) {
   margin-left: 30px;
@@ -366,13 +468,12 @@ body {
 .wrap__contact {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 #contact {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  background-color: yellowgreen;
-  padding-bottom: 0;
 }
 .choco-img {
   position: absolute;
@@ -389,21 +490,74 @@ body {
   margin: 10px;
   height: 666px;
   padding: 40px 0;
-  overflow: visible;
   z-index: 2;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-.contact__form {
+.contact__address {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 400px;
+  width: 250px;
+  text-align: center;
 }
-
+.icon__mail {
+  display: block;
+  margin: 0 auto;
+}
+.email {
+  display: block;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+  padding: 1.6em 0;
+}
+.sns__container {
+  margin-top: 3em;
+}
+.sns__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.sns__column:first-child {
+  float: left;
+}
+.sns__column:last-child {
+  float: right;
+}
+.sns__column > h6 {
+  font-family: "NEXON Lv2 Gothic Bold";
+  color: var(--purple);
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+.wrap__contact::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 50%;
+  bottom: -80%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 140%;
+  border-radius: 50%;
+  background-color: var(--purple);
+  box-shadow: rgba(53, 53, 112, 0.2) 0px 30px 60px -12px inset;
+  z-index: -1;
+}
 /* footer */
 #footer {
   width: 100%;
-  height: 12.5rem;
-  background-color: slateblue;
+  height: 12rem;
+  background-color: var(--purple);
+  text-align: center;
+}
+#footer > span {
+  margin-top: 1.3em;
+  display: block;
+  color: white;
+  line-height: 1.5;
+  font-size: 0.9em;
 }
