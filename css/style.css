@@ -527,7 +527,7 @@ body {
 .sns__column:last-child {
   float: right;
 }
-.sns__column > h6 {
+.address__subtitle {
   font-family: "NEXON Lv2 Gothic Bold";
   color: var(--purple);
   font-size: 24px;
