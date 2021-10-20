@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
     <title>포트폴리오 페이지</title>
 </head>
 <body>
     <!-- #site-nav -->
-    <nav id="nav" class="nav_fixed">
+    <nav id="nav" class="nav__defalut">
         <div class="container">
             <div class="nav__logo">
                 <a href="#header" class="logo_link">
@@ -24,6 +26,7 @@
                <li><a href="#work">Work</a></li>
                <li><a href="#gallery">Gallery</a></li>
                <li><a href="#contact">Contact</a></li>
+               <div class="marker"></div>
            </ul>
            <button class="nav__toggle-btn">toggle</button>
         </div>
@@ -34,19 +37,21 @@
 
     <div class="wrap-1200">
         <!-- #header -->
-        <header id="header">
+        <header id="header" class="section-flag">
             <div class="container">
-                <div class="title_photo">
-                    <img src="./img/title_img.png" alt="타이틀_이미지">
+                <figure class="title_photo scale-in-center">
+                    <img class="slide-up-down" src="./img/title_img.png" alt="타이틀_이미지">
+                </figure>
+                <div class="header__column_left slide-right">
+                    <hgroup class="home-title">
+                        <h2 class="main-title title__first">Design</h2>
+                        <h2 class="main-title title__second">Growth.</h2>
+                        <h1 class="sub-title">항상 배움의 자세로 성장하는 퍼블리셔</h1>
+                    </hgroup>
+                    <button class="btn_go-to-work">
+                        <span> SEE MY WORK</span>
+                    </button>
                 </div>
-                <hgroup class="home-title">
-                    <h2 class="main-title title__first">Design</h2>
-                    <h2 class="main-title title__second">Growth.</h2>
-                    <h1 class="sub-title">항상 배움의 자세로 성장하는 퍼블리셔</h1>
-                </hgroup>
-                <button class="btn_go-to-work">
-                    <span> SEE MY WORK</span>
-                </button>
             </div>
             <!-- container -->
         </header>
@@ -56,7 +61,7 @@
             <div class="wrap-1200">
 
             <!-- profile -->
-            <section class="category-section" id="profile">
+            <section class="category-section section-flag" id="profile">
                 <h2 class="category-title"> Profile</h2>
                 <div class="box-component box_profile">
                         <div class="box_profile__row">
@@ -122,8 +127,8 @@
                 </div>
             </section> 
 
-            <!-- work -->
-            <section class="category-section" id="work">
+            <!-- work --> 
+            <section class="category-section section-flag" id="work">
                 <h2 class="category-title"> Work</h2>
                     <div class="box-component box_work">
                         <div class="box_work__row">
@@ -223,21 +228,45 @@
                     
             </section>
             <!-- gallery -->
-            <section class="category-section" id="gallery">
+            <section class="category-section section-flag" id="gallery">
                 <h2 class="category-title"> Gallery</h2>
                 <div class="box_gallery">
                     <ul class="box_gallery_row">
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">
+                                <h3>3D Desk</h3>
+                                <p>
+                                    3D Art<br>
+                                    Maya, Blender
+                                </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_01.png">
                                 <img src="./img/gallery_thumb_01.png" alt="갤러리_썸네일1">
                             </a>
                         </li>
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">
+                                <h3>Name Logo</h3>
+                                <p>
+                                    Logo Design<br>
+                                    Illustrator, Photoshop
+                                </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_02.png">
                                 <img src="./img/gallery_thumb_02.png" alt="갤러리_썸네일2">
                             </a>
                         </li>
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">
+                                <h3>Donut</h3>
+                                <p>
+                                    2D Illust<br>
+                                    Clip studio
+                                </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_03.png">
                                 <img src="./img/gallery_thumb_03.png" alt="갤러리_썸네일3">
                             </a>
@@ -247,16 +276,40 @@
                     
                     <ul class="box_gallery_row">
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">
+                                <h3>Bear</h3>
+                                <p>
+                                    3D Animation<br>
+                                    Maya, After Effect
+                                </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_04.jpg">
                                 <img src="./img/gallery_thumb_04.png" alt="갤러리_썸네일4">
                             </a>
                         </li>
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">                                  
+                                    <h3>Bear &amp; Girl</h3>
+                                    <p>
+                                        3D Animation<br>
+                                        Maya, After Effect
+                                    </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_05.jpg">
                                 <img src="./img/gallery_thumb_05.png" alt="갤러리_썸네일5">
                             </a>
                         </li>
                         <li class="gallery__thumbnail">
+                            <div class="gallery__thumbnail_content">
+                                <h3>Vaccine Card</h3>
+                                <p>
+                                    Design<br>
+                                    Clip studio, Photoshop
+                                </p>
+                            </div>
+                            <!-- gallery__thumbnail_content -->
                             <a target="_blank" href="./img/gallery_06.png">
                                 <img src="./img/gallery_thumb_06.png" alt="갤러리_썸네일6">
                             </a>
@@ -273,11 +326,11 @@
         <!-- contact -->
         <div class="wrap__contact">
             <!-- contact -->
-            <section class="category-section" id="contact">
+            <section class="category-section section-flag" id="contact">
                 <div class="box-component box_contact">
-                        <div class="choco-img">
+                        <figure class="choco-img">
                             <img src="./img/choco_banana.png" alt="음료수_이미지">
-                        </div>
+                        </figure>
                          <h2 class="category-title"> Contact Me</h2>
                     <address class="contact__address">
                         <img class="icon__mail" src="./img/icon_mail.png" alt="이메일_아이콘">
@@ -316,5 +369,12 @@
             </span>
     </footer>
 
+    <!-- 갤러리 오버레이 -->
+    <div id="overlay">
+        <img class="gallery__big_photo" src="" alt="갤러리_사진_원본">
+    </div>
+
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 </body>
 </html>

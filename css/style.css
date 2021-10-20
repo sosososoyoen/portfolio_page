@@ -4,7 +4,9 @@
   --text-navy: #02253b;
   --purple: #9885d7;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-width: 1200px;
   font-family: "NEXON Lv2 Gothic", sans-serif;
@@ -18,15 +20,23 @@ body {
     rgba(247, 208, 213, 1) 100%
   );
 }
-
+.scroll_hidden {
+  overflow-y: hidden;
+}
 /* nav */
 #nav {
   position: fixed;
   width: 100%;
-  height: 5rem;
-  z-index: 999;
+  z-index: 5;
+  transition: 500ms;
+}
+.nav__defalut {
+  height: 7rem;
+  padding: 1rem 0;
 }
 .nav_fixed {
+  height: 5rem;
+  padding: 0;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -68,28 +78,31 @@ body {
   vertical-align: baseline;
 }
 .nav__menu > li > a {
-  position: relative;
   display: block;
   font-family: "NEXON Lv2 Gothic Bold";
   color: var(--text-gray);
   text-decoration: none;
   text-align: center;
   font-size: 20px;
-  margin: 0 2.1em;
+  margin: 0 1em;
   line-height: 2em;
+}
+.nav__menu > li:last-child > a {
+  margin-right: 0;
 }
 .nav__menu > li > a.current-menu {
   color: var(--text-purple);
 }
-.current-menu::after {
+.marker {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 0%;
   height: 3px;
   background-color: var(--text-purple);
+  transition: 0.5s;
 }
 /* nav - toggle btn */
 .nav__toggle-btn {
@@ -169,6 +182,8 @@ body {
 .title_photo {
   float: right;
 }
+
+/* button */
 .btn_go-to-work {
   width: 237px;
   height: 68px;
@@ -183,8 +198,9 @@ body {
     rgba(250, 174, 202, 1) 61%,
     rgba(254, 208, 193, 1) 96%
   );
-  box-shadow: rgba(242, 170, 204, 0.4) 0px 19px 38px,
-    rgba(242, 170, 204, 0.2) 0px 10px 8px;
+  box-shadow: rgba(242, 170, 204, 0.4) 0px 9px 20px,
+    rgba(175, 122, 147, 0.2) 0px 10px 8px;
+  transition: ease-in-out 0.2s;
 }
 .btn_go-to-work > span {
   line-height: 68px;
@@ -195,6 +211,11 @@ body {
   text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
 }
 
+/* button animation */
+.btn_go-to-work:hover {
+  transform: translateY(-20%);
+  box-shadow: rgba(250, 174, 202, 1) 0px 5px 15px;
+}
 /* main */
 #main {
   width: 100%;
@@ -276,6 +297,7 @@ body {
   color: var(--text-purple);
   font-size: 3em;
   line-height: 1.2em;
+  opacity: 0;
 }
 .profile__introduction {
   margin-top: 23px;
@@ -284,6 +306,7 @@ body {
   height: 300px;
   padding: 3em 0;
   line-height: 1.4;
+  opacity: 0;
 }
 .profile__introduction > span {
   display: block;
@@ -353,7 +376,7 @@ body {
 .profile__skill-icon > li:nth-child(3) > img {
   filter: drop-shadow(2px 6px 10px rgb(247, 223, 30, 0.5));
 }
-.profile__skill-icon > li:nth-child(4)  > img{
+.profile__skill-icon > li:nth-child(4) > img {
   filter: drop-shadow(2px 6px 10px rgba(86, 139, 173, 0.35));
 }
 .profile__skill-icon > li:nth-child(5) > img {
@@ -368,6 +391,7 @@ body {
 .profile__skill-icon > li:nth-child(8) > img {
   filter: drop-shadow(2px 6px 10px rgba(70, 3, 3, 0.5));
 }
+
 /* work */
 .box_work {
   height: 350px;
@@ -457,9 +481,12 @@ body {
   clear: both;
 }
 .gallery__thumbnail {
+  position: relative;
   width: 300px;
   height: 300px;
   float: left;
+  border-radius: 1em;
+  background-color: white;
 }
 .gallery__thumbnail > a > img {
   border-radius: 1em;
@@ -469,6 +496,32 @@ body {
 .gallery__thumbnail:not(:first-child) {
   margin-left: 30px;
 }
+.gallery__thumbnail:hover > a > img {
+  opacity: 0.3;
+}
+.gallery__thumbnail:hover .gallery__thumbnail_content {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.gallery__thumbnail_content {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  transform: translate(-50%, 50%);
+}
+.gallery__thumbnail_content > h3 {
+  font-family: "NEXON Lv2 Gothic Bold";
+  font-size: 1.3em;
+  line-height: 2em;
+  margin-bottom: 0.2em;
+}
+
 /* contact */
 .wrap__contact {
   position: relative;
@@ -484,10 +537,11 @@ body {
   position: absolute;
   left: -100px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-200%, -50%);
   width: 200px;
   height: 404px;
   z-index: 9;
+  opacity: 0;
 }
 
 .box_contact {
@@ -495,9 +549,11 @@ body {
   margin: 10px;
   height: 666px;
   padding: 40px 0;
-  z-index: 2;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.box_contact > .category-title {
+  opacity: 0;
 }
 .contact__address {
   position: absolute;
@@ -506,6 +562,7 @@ body {
   transform: translate(-50%, -50%);
   width: 250px;
   text-align: center;
+  opacity: 0;
 }
 .icon__mail {
   display: block;
@@ -566,4 +623,25 @@ body {
   color: white;
   line-height: 1.5;
   font-size: 0.9em;
+}
+
+/* 오버레이 */
+
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.gallery__big_photo {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
