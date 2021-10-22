@@ -53,7 +53,7 @@ window.addEventListener("scroll", ()=> {
     })
 })
 
-// 프로필 스크롤 애니메이션
+//스크롤 애니메이션
 window.addEventListener("scroll", ()=> {
     const profile = document.querySelector("#profile")
     const contact = document.querySelector("#contact")
@@ -68,8 +68,16 @@ window.addEventListener("scroll", ()=> {
         document.querySelector(".choco-img").classList.add("slide-in-left");
         document.querySelector(".box_contact > .category-title").classList.add("slide-in-left");
         document.querySelector(".contact__address").classList.add("rotate-in-2-br-cw");
-
+        
     }
+    const boxes = document.querySelectorAll(".box_work")
+    boxes.forEach(box=>{
+        const boxTop = window.pageYOffset + boxTop.getBoundingClientRect().top;
+        const boxHeight = box.clientHeight;
+        if(window.pageYOffset >= boxTop - boxHeight/3) {
+            box.classList.add("slide-in-right");
+        }
+    })
 })
 
 
