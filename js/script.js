@@ -9,7 +9,7 @@ const body = document.querySelector("body");
 
 
 
-// 갤러리 오버레이 이벤트
+// 갤러리 모달창 이벤트
 thumbnails.forEach(item => {
     item.addEventListener("click",(e)=>{
         e.preventDefault();
@@ -31,17 +31,40 @@ function indicator(e) {
     marker.style.width = e.offsetWidth+"px";
 }
 
-// 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜
+// 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜 & 섹션 등장 애니메이션
 window.addEventListener("scroll", ()=> {
     let current="";
     
     sections.forEach(section => {
         const sectionTop = window.pageYOffset + section.getBoundingClientRect().top
         const sectionHeight = section.clientHeight;
+        // 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜
         if(window.pageYOffset >= sectionTop - sectionHeight/3) {
             current = section.getAttribute("id");
         }
+        // 섹션 등장 애니메이션
+        if(current=="profile") {
+            document.querySelector(".greeting").classList.add("focus-in-expand");
+            document.querySelector(".profile__introduction").classList.add("tracking-in-contract");
+        }
+        if(current=="contact") {
+            document.querySelector(".choco-img").classList.add("slide-in-left");
+            document.querySelector(".box_contact > .category-title").classList.add("slide-in-left");
+            document.querySelector(".contact__address").classList.add("rotate-in-2-br-cw");
+        }
+        if(current=="work"){
+            const boxes = document.querySelectorAll(".box_work")
+            boxes.forEach(box=>{
+                const boxTop = window.pageYOffset + box.getBoundingClientRect().top;
+                const boxHeight = box.clientHeight;
+                if(window.pageYOffset >= boxTop - boxHeight) {
+                    box.classList.add("slide-in-right");
+                }
+            })
+        }
     })
+
+
 
     menus.forEach(menu => {
         menu.classList.remove("current-menu");
@@ -52,34 +75,6 @@ window.addEventListener("scroll", ()=> {
         }
     })
 })
-
-//스크롤 애니메이션
-window.addEventListener("scroll", ()=> {
-    const profile = document.querySelector("#profile")
-    const contact = document.querySelector("#contact")
-    const profileTop = window.pageYOffset + profile.getBoundingClientRect().top
-    const contactTop = window.pageYOffset + contact.getBoundingClientRect().top
-    const profileHeight = profile.clientHeight;
-    const contactHeight = contact.clientHeight;
-    if(window.pageYOffset >= profileTop - profileHeight/3) {
-        document.querySelector(".greeting").classList.add("focus-in-expand");
-        document.querySelector(".profile__introduction").classList.add("tracking-in-contract");
-    } if(window.pageYOffset >= contactTop - contactHeight/3) {
-        document.querySelector(".choco-img").classList.add("slide-in-left");
-        document.querySelector(".box_contact > .category-title").classList.add("slide-in-left");
-        document.querySelector(".contact__address").classList.add("rotate-in-2-br-cw");
-        
-    }
-    const boxes = document.querySelectorAll(".box_work")
-    boxes.forEach(box=>{
-        const boxTop = window.pageYOffset + boxTop.getBoundingClientRect().top;
-        const boxHeight = box.clientHeight;
-        if(window.pageYOffset >= boxTop - boxHeight/3) {
-            box.classList.add("slide-in-right");
-        }
-    })
-})
-
 
 
 // 스크롤 시 내비게이션 컨테이너가 생기는 이벤트
