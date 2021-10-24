@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav__menu > li {
+            float: left;
+            width: 20%;
+            height: 100%;
+            vertical-align: baseline;
+        }
+        .nav__menu > li > a {
+            display: block;
+            font-family: "NEXON Lv2 Gothic Bold";
+            color: gray;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.25em;
+            margin: 0 1em;
+            line-height: 2em;
+        }
+        .nav__menu > li:last-child > a {
+            margin-right: 0;
+        }
+        .nav__menu > li > a.current-menu {
+            color: purple;
+        }
+        .marker {
+            content: "";
+            position: absolute;
+            bottom: 1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 3px;
+            background-color: var(--text-purple);
+            transition: 0.5s;
+        }
+    
+    </style>
+</head>
+<body>
+    <ul class="nav__menu">
+        <li><a href="#header" class="current-menu">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="marker"></div>
+    </ul>
+
+    <script>
+        // nav의 인디케이터(marker)의 길이와 위치를 맞추는 함수
+        function indicator(e) {
+            marker.style.left = e.offsetLeft+e.offsetWidth-e.offsetWidth/2+"px";
+            marker.style.width = e.offsetWidth+"px";
+        }
+        // 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜 & 섹션 등장 애니메이션
+    window.addEventListener("scroll", ()=> {
+        let current="";
+        
+        sections.forEach(section => {
+            const sectionTop = window.pageYOffset + section.getBoundingClientRect().top
+            const sectionHeight = section.clientHeight;
+            // 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜
+            if(window.pageYOffset >= sectionTop - sectionHeight/3) {
+                current = section.getAttribute("id");
+            }
+        })
+
+
+
+        menus.forEach(menu => {
+            menu.classList.remove("current-menu");
+            const href = menu.getAttribute("href").substr(1);
+            if(href === current){
+                menu.classList.add("current-menu")
+                indicator(menu);
+            }
+        })
+    })
+    </script>
+</body>
+</html>
+
+
+

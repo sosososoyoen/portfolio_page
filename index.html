@@ -34,7 +34,6 @@
     </nav>
 
     <!-- wrap-1200 -->
-
     <div class="wrap-1200">
         <!-- #header -->
         <header id="header" class="section-flag">
@@ -132,7 +131,15 @@
                 <h2 class="category-title"> Work</h2>
                     <div class="box-component box_work">
                         <figure class="box_work__row">
-                            <img class="work__thumbnail" src="./img/work_thumb_01.png" alt="내셔널지오그래픽_홈페이지_썸네일">
+                            <a class="work__thumbnail" href="#work">
+                                <div class="work__img_caption">
+                                    <span class="caption">
+                                        gitHub 페이지로 가기 
+                                        <span class="icon_window">바로가기</span>
+                                    </span>
+                                </div>
+                                <img class="work__thumbnail_img" src="./img/work_thumb_01.png" alt="내셔널지오그래픽_홈페이지_썸네일">
+                            </a>
                         </figure>
                         <div class="box_work__row">
                             <div class="work__info">
@@ -151,7 +158,15 @@
                     <!-- 1. box_work -->
                     <div class="box-component box_work">
                         <figure class="box_work__row">
-                            <img class="work__thumbnail" src="./img/work_thumb_02.png" alt="그리너_홈페이지_썸네일">
+                            <a class="work__thumbnail" href="#work">
+                                <div class="work__img_caption">
+                                    <span class="caption">
+                                        gitHub 페이지로 가기 
+                                        <span class="icon_window">바로가기</span>
+                                    </span>
+                                </div>
+                                <img class="work__thumbnail_img" src="./img/work_thumb_02.png" alt="그리너 홈페이지 리뉴얼">
+                            </a>
                         </figure>
                         <div class="box_work__row">
                             <div class="work__info">
@@ -170,7 +185,15 @@
                     <!-- 2. box_work -->
                     <div class="box-component box_work">
                         <figure class="box_work__row">
-                            <img class="work__thumbnail" src="./img/work_thumb_03.png" alt="나만의_백신_인증서_홈페이지_썸네일">
+                            <a class="work__thumbnail" href="#work">
+                                <div class="work__img_caption">
+                                    <span class="caption">
+                                        gitHub 페이지로 가기 
+                                        <span class="icon_window">바로가기</span>
+                                    </span>
+                                </div>
+                                <img class="work__thumbnail_img" src="./img/work_thumb_03.png" alt="나만의 백신 인증서 홈페이지 제작">
+                            </a>
                         </figure>
                         <div class="box_work__row">
                             <div class="work__info">
@@ -189,7 +212,15 @@
                     <!-- 3. box_work -->
                     <div class="box-component box_work">
                         <figure class="box_work__row">
-                            <img class="work__thumbnail" src="./img/work_thumb_04.png" alt="모멘텀_클론코딩_썸네일">
+                            <a class="work__thumbnail" href="#work">
+                                <div class="work__img_caption">
+                                    <span class="caption">
+                                        gitHub 페이지로 가기 
+                                        <span class="icon_window">바로가기</span>
+                                    </span>
+                                </div>
+                                <img class="work__thumbnail_img" src="./img/work_thumb_04.png" alt="Momentum 클론 코딩">
+                            </a>
                         </figure>
                         <div class="box_work__row">
                             <div class="work__info">
@@ -208,7 +239,15 @@
                     <!-- 4. box_work -->
                     <div class="box-component box_work">
                         <figure class="box_work__row">
-                            <img class="work__thumbnail" src="./img/work_thumb_05.png" alt="카카오톡 클론코딩">
+                            <a class="work__thumbnail" href="#work">
+                                <div class="work__img_caption">
+                                    <span class="caption">
+                                        gitHub 페이지로 가기 
+                                        <span class="icon_window">바로가기</span>
+                                    </span>
+                                </div>
+                                <img class="work__thumbnail_img" src="./img/work_thumb_05.png" alt="카카오톡 클론코딩">
+                            </a>
                         </figure>
                         <div class="box_work__row">
                             <div class="work__info">
@@ -353,11 +392,7 @@
         </div>
         <!-- wrap-contact -->
     </main>
-
-
-
-
-                 
+              
     <footer id="footer">
             <img src="./img/logo.png" alt="로고_이미지">
             <p>
@@ -368,8 +403,45 @@
 
     <!-- 갤러리 오버레이 -->
     <div id="overlay">
-        <img class="gallery__big_photo" src="" alt="갤러리_사진_원본">
+        <button id="prev_btn" class="btn">
+            <span>prev button</span>
+        </button>
+        <button id="next_btn" class="btn">
+            <span>next button</span>
+        </button>
+        <div class="container">
+            <ul id="slide">
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본1">
+                </li>
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본2">
+                </li>
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본3">
+                </li>
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본4">
+                </li>
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본5">
+                </li>
+                <li>
+                    <img class="gallery__big_photo" src="https://via.placeholder.com/350x150" alt="갤러리_사진_원본6">
+                </li>
+            </ul>
+        </div>
+        
+        <!-- <ul id="bullets">
+            <li><a href="#" class="on">0</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul> -->
     </div>
+    
 
     <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>

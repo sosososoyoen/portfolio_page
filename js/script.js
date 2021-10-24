@@ -3,27 +3,68 @@ const marker = document.querySelector(".marker")
 const menus = document.querySelectorAll(".nav__menu > li > a")
 const sections = document.querySelectorAll(".section-flag");
 const overlay = document.querySelector("#overlay")
-const bigPhoto = document.querySelector(".gallery__big_photo")
+const bigPhoto = document.querySelectorAll(".gallery__big_photo")
 const thumbnails = document.querySelectorAll(".box_gallery li")
 const body = document.querySelector("body");
-
+const slide = document.querySelector("#slide");
+const slides = document.querySelectorAll("#slide>li")
+var timerId=0;
+let photoIndex=0;
+const photoCount = bigPhoto.length;
+var duration = 400;
 
 
 // 갤러리 모달창 이벤트
-thumbnails.forEach(item => {
-    item.addEventListener("click",(e)=>{
-        e.preventDefault();
-        body.classList.add("scroll_hidden")
-        overlay.style.display = "block";
-        const photo = item.lastElementChild
-        console.log(photo);
-        bigPhoto.src = photo.href;
-        });
-        overlay.addEventListener("click", function (e) {
-            this.style.display = "none";
-            body.classList.remove("scroll_hidden")
-    })
+// thumbnails.forEach(item => {
+//     item.addEventListener("click",(e)=>{
+//         e.preventDefault();
+//         body.classList.add("scroll_hidden")
+//         overlay.style.display = "block";
+//         const photo = item.lastElementChild
+//         console.log(photo);
+//         bigPhoto.src = photo.href;
+//         });
+//         overlay.addEventListener("click", function (e) {
+//             this.style.display = "none";
+//             body.classList.remove("scroll_hidden")
+//     })
+// })
+
+// 슬라이드 버튼 클릭 이벤트
+document.querySelector("#next_btn").addEventListener("click", nextSlideImage)
+document.querySelector("#prev_btn").addEventListener("click", prevSlideImage)
+
+// 다음 사진으로 슬라이드
+function nextSlideImage() {
+    photoIndex++;
+    photoIndex %= photoCount;
+    slide.style.left = "-100%";
+    slide.style.transition = duration+"ms";
+    window.setTimeout(function(){ 
+        slide.appendChild(slide.firstElementChild);
+        slide.style.transition = "0ms";
+        slide.style.left = 0;
+    },duration)
+}
+// 이전 사진으로 슬라이드
+function prevSlideImage() {
+    photoIndex --;
+    photoIndex %= photoCount;
+    slide.style.left = "100%";
+    slide.style.transition = duration+"ms";
+    window.setTimeout(function(){ 
+        slide.insertBefore(slide.lastElementChild,slide.firstChild);
+        slide.style.transition = "0ms";
+        slide.style.left = 0;
+    },duration)
+}
+// bullet 생성하는 함수
+const bullets = document.createElement("ul").setAttribute("id","bullets")
+overlay.appendChild(bullets);
+slides.forEach(slide,()=>{
+    
 })
+
 
 // nav의 인디케이터(marker)의 길이와 위치를 맞추는 함수
 function indicator(e) {
@@ -65,7 +106,6 @@ window.addEventListener("scroll", ()=> {
     })
 
 
-
     menus.forEach(menu => {
         menu.classList.remove("current-menu");
         const href = menu.getAttribute("href").substr(1);
@@ -88,10 +128,3 @@ VanillaTilt.init(document.querySelectorAll(".gallery__thumbnail")), {
     glare: true,
     "max-glare": 1
 };
-// VanillaTilt.init(document.querySelectorAll(".box_profile")), {
-//     max: 35,
-//     speed: 200,
-//     glare: true,
-//     perspective:100,
-//     "max-glare": 1
-// };
