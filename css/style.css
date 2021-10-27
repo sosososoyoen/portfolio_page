@@ -314,7 +314,17 @@ body {
   border-radius: 50%;
   margin: 23px auto;
   background-color: var(--purple);
-  box-shadow: rgba(77, 90, 134, 0.4) 0px 7px 29px 0px;
+  box-shadow: rgb(152, 133, 215, 0.5) 0px 7px 29px 0px;
+  background: var(--purple);
+  overflow: hidden;
+}
+.profile__photo > img {
+  width: 100%;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.profile__photo:hover img {
+  opacity: 1;
 }
 .profile__headline {
   width: 320px;
@@ -477,15 +487,19 @@ body {
   color: white;
   opacity: 0;
   transition: 0.3s;
+  vertical-align: middle;
 }
 .work__img_caption > .caption {
-  display: block;
+  display: inline-block;
   font-size: 1.1em;
   height: 1.1em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.work__img_caption > .material-icons {
+  font-size: 0.8em;
 }
 .icon_window {
   background: no-repeat url("../img/new-window.png");
@@ -705,7 +719,7 @@ body {
 /* 오버레이 */
 
 #overlay {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 999;
   top: 0;
@@ -716,13 +730,13 @@ body {
   -webkit-backdrop-filter: blur(18px);
 }
 #overlay > .container {
-  width: 500px;
-  height: 500px;
+  width: 60em;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #slide {
   position: absolute;
@@ -740,17 +754,25 @@ body {
   float: left;
 }
 .gallery__big_photo {
-  width: 500px;
+  width: 60em;
 }
 
 .btn {
-  padding: 1em;
+  padding: 4em;
   border: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 5;
+  color: var(--text-purple);
+  background: transparent;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+.btn:hover,
+button.close:hover {
+  opacity: 1;
 }
 
 #prev_btn {
@@ -758,6 +780,20 @@ body {
 }
 #next_btn {
   right: 10%;
+}
+button.close {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  transform: translateY(-200%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2em;
+  color: var(--text-purple);
+  z-index: 9;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 #bullets {
@@ -782,5 +818,18 @@ body {
   transition: 0.2s;
 }
 #bullets > li > a.on {
-  background-color: #333;
+  background-color: var(--text-navy);
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
     <title>포트폴리오 페이지</title>
 </head>
@@ -64,7 +65,9 @@
                 <h2 class="category-title"> Profile</h2>
                 <div class="box-component box_profile">
                         <div class="box_profile__row">
-                                <img class="profile__photo" src="img/profile_img.jpg" alt="프로필_이미지">
+                                <figure class="profile__photo">
+                                    <img src="img/profile_img.jpg" alt="프로필_이미지">
+                                </figure>
                                 <div class="profile__headline">
                                     <span class="greeting">
                                         안녕하세요.<br>
@@ -135,7 +138,9 @@
                                 <div class="work__img_caption">
                                     <span class="caption">
                                         gitHub 페이지로 가기 
-                                        <span class="icon_window">바로가기</span>
+                                        <span class="material-icons">
+                                            open_in_new
+                                            </span>
                                     </span>
                                 </div>
                                 <img class="work__thumbnail_img" src="./img/work_thumb_01.png" alt="내셔널지오그래픽_홈페이지_썸네일">
@@ -161,8 +166,10 @@
                             <a class="work__thumbnail" href="#work">
                                 <div class="work__img_caption">
                                     <span class="caption">
-                                        gitHub 페이지로 가기 
-                                        <span class="icon_window">바로가기</span>
+                                        GitHub 페이지로 가기 
+                                        <span class="material-icons">
+                                            open_in_new
+                                            </span>
                                     </span>
                                 </div>
                                 <img class="work__thumbnail_img" src="./img/work_thumb_02.png" alt="그리너 홈페이지 리뉴얼">
@@ -188,8 +195,10 @@
                             <a class="work__thumbnail" href="#work">
                                 <div class="work__img_caption">
                                     <span class="caption">
-                                        gitHub 페이지로 가기 
-                                        <span class="icon_window">바로가기</span>
+                                        GitHub 페이지로 가기 
+                                        <span class="material-icons">
+                                            open_in_new
+                                            </span>
                                     </span>
                                 </div>
                                 <img class="work__thumbnail_img" src="./img/work_thumb_03.png" alt="나만의 백신 인증서 홈페이지 제작">
@@ -215,8 +224,10 @@
                             <a class="work__thumbnail" href="#work">
                                 <div class="work__img_caption">
                                     <span class="caption">
-                                        gitHub 페이지로 가기 
-                                        <span class="icon_window">바로가기</span>
+                                        GitHub 페이지로 가기 
+                                        <span class="material-icons">
+                                            open_in_new
+                                            </span>
                                     </span>
                                 </div>
                                 <img class="work__thumbnail_img" src="./img/work_thumb_04.png" alt="Momentum 클론 코딩">
@@ -242,8 +253,10 @@
                             <a class="work__thumbnail" href="#work">
                                 <div class="work__img_caption">
                                     <span class="caption">
-                                        gitHub 페이지로 가기 
-                                        <span class="icon_window">바로가기</span>
+                                        GitHub 페이지로 가기 
+                                        <span class="material-icons">
+                                            open_in_new
+                                            </span>
                                     </span>
                                 </div>
                                 <img class="work__thumbnail_img" src="./img/work_thumb_05.png" alt="카카오톡 클론코딩">
@@ -403,11 +416,20 @@
 
     <!-- 갤러리 오버레이 -->
     <div id="overlay">
+        <button class="close">
+            <span class="material-icons md-48">
+                cancel
+                </span>
+        </button>
         <button id="prev_btn" class="btn">
-            <span>prev button</span>
+            <span class="material-icons md-48">
+                arrow_back_ios
+                </span>
         </button>
         <button id="next_btn" class="btn">
-            <span>next button</span>
+            <span class="material-icons md-48">
+                arrow_forward_ios
+                </span>
         </button>
         <div class="container">
             <ul id="slide">

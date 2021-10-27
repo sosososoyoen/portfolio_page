@@ -49,10 +49,11 @@
   -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.5s;
 }
 @-webkit-keyframes focus-in-expand {
   0% {
-    letter-spacing: -0.5em;
+    letter-spacing: -0.3em;
     -webkit-filter: blur(8px);
     filter: blur(8px);
     opacity: 0;
@@ -80,7 +81,7 @@
   -webkit-animation: tracking-in-contract 0.8s
     cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 @-webkit-keyframes tracking-in-contract {
   0% {
