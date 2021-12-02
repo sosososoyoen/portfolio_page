@@ -93,14 +93,12 @@ function prevSlideImage() {
 }
 
 //bullet을 클릭하면 해당하는 번호의 이미지로 슬라이드 되는 함수
-bullet.forEach(a=>{
+bullet.forEach((a,index)=>{
     a.addEventListener("click", function(e){
-        console.log("photoindex"+photoIndex);
         e.preventDefault();
-        let index = Array.prototype.indexOf.call(bullet,a);
+        // let index = Array.prototype.indexOf.call(bullet,a);
         const clickedIndex = index;
         let step = clickedIndex - photoIndex;
-        console.log("step"+step);
         photoIndex = clickedIndex;
         for (let i=0; i<bullet.length; i++) {
             bullet[i].classList.remove("on");
@@ -111,7 +109,6 @@ bullet.forEach(a=>{
 
         if (step>0) {
             let sliceSlides = slidesArr.slice(undefined,step);
-            console.log(sliceSlides);
             slide.style.transition = duration+"ms";
             slide.style.left=step * (-100)+"%";
             window.setTimeout(function(){ 
@@ -121,14 +118,13 @@ bullet.forEach(a=>{
         
         }else {
             sliceSlides = slidesArr.slice(step);
-            console.log(sliceSlides);
             slide.prepend(...sliceSlides);
             slide.style.left = step * 100 + "%";
-            slide.style.transition = "0ms";
+            slide.style.transition = duration+"ms";
             window.setTimeout(function(){ 
                 slide.style.left = 0;
-                slide.style.transition = duration+"ms";
-            },"200ms")
+                slide.style.transition = "0ms";
+            },duration)
         }
     })
 })
@@ -179,7 +175,7 @@ window.addEventListener("scroll", ()=> {
         const sectionHeight = section.clientHeight;
         var height = document.body.clientHeight - (window.scrollY + window.innerHeight)
         const contactBox = document.getElementById("contact")
-        // 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜
+        
         if(window.pageYOffset >= sectionTop - sectionHeight/4) {
             current = section.getAttribute("id");
         }
@@ -232,3 +228,13 @@ VanillaTilt.init(document.querySelectorAll(".gallery__thumbnail")), {
     glare: true,
     "max-glare": 1
 };
+
+//이동
+const workThumbs = document.querySelectorAll(".work__thumbnail");
+workThumbs.forEach(thumb => {
+    thumb.addEventListener("click", function(e){
+        e.preventDefault();
+        window.open(this.href);
+        
+    })
+})
