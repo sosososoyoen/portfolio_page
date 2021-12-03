@@ -379,7 +379,7 @@ body {
 .profile__skill {
   width: 470px;
   height: 220px;
-  margin-top: 90px;
+  margin-top: 16px;
   float: right;
 }
 .profile__skill > h3 {
@@ -414,6 +414,10 @@ body {
   transition: 0.2s;
   transform: translateY(-5%);
 }
+.profile__skill-icon > li:nth-child(9) > img {
+  width: 55px;
+  height: 55px;
+}
 
 .profile__skill-icon > li:first-child > img:hover {
   filter: drop-shadow(4px 8px 10px rgba(255, 138, 88, 0.7));
@@ -438,6 +442,9 @@ body {
 }
 .profile__skill-icon > li:nth-child(8) > img:hover {
   filter: drop-shadow(4px 8px 10px rgba(70, 3, 3, 0.7));
+}
+.profile__skill-icon > li:nth-child(9) > img:hover {
+  filter: drop-shadow(4px 8px 10px rgba(255, 188, 233, 0.7));
 }
 
 /* work */
