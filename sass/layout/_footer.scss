@@ -1,0 +1,14 @@
+/* footer */
+#footer {
+  width: 100%;
+  height: 12rem;
+  background-color: $purple;
+  text-align: center;
+}
+#footer > p {
+  margin-top: 1.3em;
+  display: block;
+  color: white;
+  line-height: 1.5;
+  font-size: 0.9em;
+}

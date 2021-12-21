@@ -1,0 +1,17 @@
+$text-purple: #9d5cbb;
+$text-gray: #71787d;
+$text-navy: #02253b;
+$purple: #9885d7;
+
+//미디어쿼리
+$breakpoint-mobile: 481px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1200px;
+
+%clear {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

@@ -1,0 +1,40 @@
+/* button */
+.btn_go-to-work {
+  width: 237px;
+  height: 68px;
+  border-radius: 30px;
+  margin-top: 80px;
+  border: none;
+  cursor: pointer;
+  background: rgb(159, 139, 224);
+  background-image: linear-gradient(
+    to right,
+    rgba(159, 139, 224, 1) 0%,
+    rgba(250, 174, 202, 1) 60%,
+    rgba(254, 208, 193, 1) 90%
+  );
+  box-shadow: 0 4px 15px 0 rgba(159, 139, 224, 0.75);
+  transition: all 0.4s ease-in-out;
+  background-size: 200% 100%;
+}
+.btn_go-to-work > span {
+  line-height: 68px;
+  font-family: "NEXON Lv2 Gothic";
+  color: white;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
+  transition: all 0.4s ease-in-out;
+}
+.btn_hover:hover > span {
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 0 10px;
+}
+
+/* button animation */
+.btn_hover:hover {
+  background-position: 100% 0;
+}
+.btn_go-to-work:hover {
+  transform: translateY(-7%);
+  box-shadow: 0 10px 20px 0 rgba(250, 174, 202, 0.5);
+}

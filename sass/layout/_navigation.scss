@@ -1,0 +1,91 @@
+/* nav */
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  transition: 0.5s;
+  .container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    @extend %clear;
+  }
+}
+.nav__defalut {
+  height: 7rem;
+  padding: 1rem 0;
+}
+.nav_fixed {
+  height: 5rem;
+  padding: 0;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.nav__logo {
+  box-sizing: content-box;
+  width: 6.25rem;
+  height: 5rem;
+  float: left;
+}
+.logo_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.781rem 0;
+}
+
+.nav__menu {
+  float: right;
+  height: 5rem;
+  padding-top: 1.25rem;
+  & > li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    vertical-align: baseline;
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+    & > a {
+      &.current-menu {
+        color: $text-purple;
+      }
+      display: block;
+      font-family: "NEXON Lv2 Gothic Bold";
+      color: $text-gray;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.25rem;
+      margin: 0 1em;
+      line-height: 2em;
+    }
+  }
+}
+.marker {
+  content: "";
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background-color: $text-purple;
+  transition: 0.5s;
+}
+/* nav - toggle btn */
+.nav__toggle-btn {
+  font-family: "Material Icons";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  display: none;
+  @include tablet {
+    // display: block;
+  }
+}

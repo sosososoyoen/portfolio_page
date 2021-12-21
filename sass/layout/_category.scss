@@ -1,0 +1,46 @@
+/* main */
+#main {
+  width: 100%;
+  overflow: hidden;
+}
+.category-section {
+  box-sizing: content-box;
+  padding-top: 100px;
+  width: 100%;
+  height: max-content;
+  padding-bottom: 90px;
+}
+.category-title {
+  position: relative;
+  text-align: center;
+  font-family: "SBAggroB";
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+  line-height: 1.6;
+  margin-bottom: 54px;
+}
+.category-title::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  width: 34px;
+  height: 4px;
+  background-color: $purple;
+}
+.box-component {
+  width: 1180px;
+  margin: 0 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgb(255, 255, 255);
+}

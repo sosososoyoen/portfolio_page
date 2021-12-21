@@ -1,0 +1,62 @@
+/* header */
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 20rem;
+  padding-top: 100px;
+}
+#header > .container {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-title {
+  width: 47%;
+  height: 330px;
+  float: left;
+}
+.main-title {
+  font-family: "SBAggroB";
+  font-size: 100px;
+  letter-spacing: 0.025em;
+  line-height: 1.1;
+}
+.title__first::first-letter {
+  font-size: 136px;
+}
+.title__first {
+  background: rgb(151, 89, 187);
+  background: linear-gradient(
+    -154deg,
+    rgba(151, 89, 187, 1) 20%,
+    rgba(252, 166, 198, 1) 60%,
+    rgba(246, 175, 151, 1) 80%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.title__second {
+  background: rgb(246, 175, 151);
+  background: linear-gradient(
+    -155deg,
+    rgba(246, 175, 151, 1) 25%,
+    rgba(252, 166, 198, 1) 51%,
+    rgba(151, 89, 187, 1) 70%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.sub-title {
+  font-family: "SBAggroL";
+  line-height: 5em;
+  font-size: 24px;
+  color: $text-purple;
+  margin-left: 1em;
+}
+.title_photo {
+  float: right;
+}
