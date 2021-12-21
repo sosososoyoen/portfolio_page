@@ -18,6 +18,9 @@
   height: 404px;
   z-index: 9;
   opacity: 0;
+  @include tablet {
+    left: 0;
+  }
 }
 
 .box_contact {

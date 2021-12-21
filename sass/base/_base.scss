@@ -21,4 +21,7 @@ body {
 .wrap-1200 {
   max-width: 1200px;
   margin: 0 auto;
+  @include tablet {
+    width: 100%;
+  }
 }

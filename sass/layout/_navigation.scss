@@ -9,6 +9,10 @@
     width: 1200px;
     margin: 0 auto;
     @extend %clear;
+    @include tablet {
+      width: 100%;
+      padding: 0 2rem;
+    }
   }
 }
 .nav__defalut {
@@ -21,6 +25,10 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  @include tablet {
+    height: 7rem;
+    padding: 1rem 0;
+  }
 }
 .nav__logo {
   box-sizing: content-box;
@@ -40,6 +48,7 @@
   float: right;
   height: 5rem;
   padding-top: 1.25rem;
+
   & > li {
     float: left;
     width: 20%;
@@ -61,7 +70,10 @@
       text-align: center;
       font-size: 1.25rem;
       margin: 0 1em;
-      line-height: 2em;
+      line-height: 2rem;
+      @include tablet {
+        font-size: 1.7rem;
+      }
     }
   }
 }
@@ -75,6 +87,9 @@
   height: 3px;
   background-color: $text-purple;
   transition: 0.5s;
+  @include tablet {
+    // display: none;
+  }
 }
 /* nav - toggle btn */
 .nav__toggle-btn {
@@ -83,8 +98,13 @@
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
   display: none;
+  .material-icons-outlined {
+    font-size: 36px;
+  }
   @include tablet {
     // display: block;
   }

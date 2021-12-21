@@ -155,5 +155,5 @@ button.close {
   transition: 0.2s;
 }
 #bullets > li > a.on {
-  background-color: var(--text-navy);
+  background-color: $text-navy;
 }
