@@ -1,8 +1,8 @@
 /* button */
 .btn_go-to-work {
-  width: 237px;
-  height: 68px;
-  border-radius: 30px;
+  width: 14.8rem;
+  height: 4.25rem;
+  border-radius: 2rem;
   margin-top: 80px;
   border: none;
   cursor: pointer;
@@ -16,6 +16,9 @@
   box-shadow: 0 4px 15px 0 rgba(159, 139, 224, 0.75);
   transition: all 0.4s ease-in-out;
   background-size: 200% 100%;
+  @include mobile {
+    margin: 0 auto;
+  }
 }
 .btn_go-to-work > span {
   line-height: 68px;

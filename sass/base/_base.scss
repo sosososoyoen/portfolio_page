@@ -1,8 +1,10 @@
 html {
   scroll-behavior: smooth;
+  @include mobile {
+    font-size: 50%;
+  }
 }
 body {
-  min-width: 1200px;
   font-family: "NEXON Lv2 Gothic", sans-serif;
   color: $text-navy;
   list-style: none;
@@ -13,6 +15,10 @@ body {
     rgba(254, 252, 201, 1) 44%,
     rgba(247, 208, 213, 1) 100%
   );
+  // @include mobile {
+  //   min-width: auto;
+  //   width: 100vw;
+  // }
 }
 .scroll_hidden {
   overflow-y: hidden;
@@ -22,6 +28,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   @include tablet {
-    width: 100%;
+    max-width: none;
   }
 }

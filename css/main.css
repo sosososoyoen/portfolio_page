@@ -231,8 +231,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 757px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
-  min-width: 1200px;
   font-family: "NEXON Lv2 Gothic", sans-serif;
   color: #02253b;
   list-style: none;
@@ -251,9 +256,9 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .wrap-1200 {
-    width: 100%;
+    max-width: none;
   }
 }
 
@@ -529,9 +534,9 @@ body {
 
 /* button */
 .btn_go-to-work {
-  width: 237px;
-  height: 68px;
-  border-radius: 30px;
+  width: 14.8rem;
+  height: 4.25rem;
+  border-radius: 2rem;
   margin-top: 80px;
   border: none;
   cursor: pointer;
@@ -543,6 +548,12 @@ body {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background-size: 200% 100%;
+}
+
+@media screen and (max-width: 757px) {
+  .btn_go-to-work {
+    margin: 0 auto;
+  }
 }
 
 .btn_go-to-work > span {
@@ -578,8 +589,13 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 20rem;
   padding-top: 55rem;
+}
+
+@media screen and (max-width: 757px) {
+  #header {
+    width: 100vw;
+  }
 }
 
 #header > .container {
@@ -592,9 +608,17 @@ body {
           transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   #header > .container {
     padding: 1em;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  #header > .container {
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
   }
 }
 
@@ -604,11 +628,27 @@ body {
   float: left;
 }
 
+@media screen and (max-width: 757px) {
+  .home-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    float: none;
+    height: auto;
+  }
+}
+
 .main-title {
   font-family: "SBAggroB";
-  font-size: 100px;
+  font-size: 6.25rem;
   letter-spacing: 0.025em;
   line-height: 1.1;
+}
+
+@media screen and (max-width: 757px) {
+  .main-title {
+    text-align: center;
+  }
 }
 
 .title__first {
@@ -632,13 +672,34 @@ body {
 .sub-title {
   font-family: "SBAggroL";
   line-height: 5em;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #9d5cbb;
   margin-left: 1em;
 }
 
+@media screen and (max-width: 757px) {
+  .sub-title {
+    text-align: center;
+  }
+}
+
 .title_photo {
   float: right;
+}
+
+@media screen and (max-width: 757px) {
+  .title_photo {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .header__column_left {
+    margin: 0 auto;
+  }
 }
 
 /* nav */
@@ -656,9 +717,15 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   #nav .container {
-    width: 100%;
+    width: auto;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  #nav .container {
     padding: 0 2rem;
   }
 }
@@ -676,8 +743,9 @@ body {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav_fixed {
+    width: 100%;
     height: 7rem;
     padding: 1rem 0;
   }
@@ -694,9 +762,11 @@ body {
 .logo_link {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 80%;
   text-align: center;
-  padding: 0.781rem 0;
+  margin-top: 0.781rem;
+  background: center/contain no-repeat url("../img/logo.png");
+  background-size: contain;
 }
 
 .nav__menu {
@@ -731,7 +801,7 @@ body {
   color: #9d5cbb;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav__menu > li > a {
     font-size: 1.7rem;
   }
@@ -822,6 +892,12 @@ body {
   border: 1px solid white;
 }
 
+@media screen and (max-width: 1024px) {
+  .box-component {
+    width: 100%;
+  }
+}
+
 /* contact */
 .wrap__contact {
   position: relative;
@@ -847,7 +923,7 @@ body {
   opacity: 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .choco-img {
     left: 0;
   }
