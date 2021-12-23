@@ -190,7 +190,11 @@ window.addEventListener("scroll", ()=> {
         if(current=="contact") {
             document.querySelector(".choco-img").classList.add("slide-in-left");
             document.querySelector(".box_contact > .category-title").classList.add("slide-in-left");
-            document.querySelector(".contact__address").classList.add("rotate-in-2-br-cw");
+            if(matchMedia("screen and (max-width: 757px)").matches) {
+                document.querySelector(".contact__address").classList.add("rotate-mobile");
+            }else {
+                document.querySelector(".contact__address").classList.add("rotate-in-2-br-cw");
+            }
         }
         if(current=="work"){
             const boxes = document.querySelectorAll(".box_work")

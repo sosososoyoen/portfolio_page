@@ -8,18 +8,26 @@
   position: relative;
   width: 1200px;
   margin: 0 auto;
+  @include mobile {
+    width: auto;
+  }
 }
 .choco-img {
   position: absolute;
   left: -100px;
   top: 50%;
   transform: translate(-200%, -50%);
-  width: 200px;
-  height: 404px;
+  width: 12.5rem;
+  height: 25.25rem;
   z-index: 9;
   opacity: 0;
-  @include tablet {
+  @include mobile {
+    display: none;
+    top: 0;
     left: 0;
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -30,9 +38,12 @@
   padding: 40px 0;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-.box_contact > .category-title {
-  opacity: 0;
+  @include mobile {
+    height: auto;
+  }
+  & > .category-title {
+    opacity: 0;
+  }
 }
 .contact__address {
   position: absolute;
@@ -42,37 +53,54 @@
   width: 250px;
   text-align: center;
   opacity: 0;
+  @include mobile {
+    position: static;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
 }
 .icon__mail {
   display: block;
   margin: 0 auto;
+  width: 2.81rem;
+  height: 2.18rem;
 }
 .email {
   display: block;
   font-weight: bold;
-  letter-spacing: 0.05em;
-  font-size: 1.2em;
-  padding: 1.6em 0;
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
+  padding: 1.6rem 0;
 }
 .sns__container {
-  margin-top: 3em;
+  margin-top: 3rem;
+  text-align: center;
 }
 .sns__container::after {
   display: block;
   content: "";
   clear: both;
 }
-.sns__column:first-child {
-  float: left;
+.sns__column {
+  display: inline-block;
+  a {
+    width: 3.75rem;
+    height: 3.75rem;
+    img {
+      width: 100%;
+    }
+  }
 }
 .sns__column:last-child {
-  float: right;
+  margin-left: 2rem;
 }
 .address__subtitle {
   display: block;
   font-family: "NEXON Lv2 Gothic Bold";
   color: $purple;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 1em;
 }
 .wrap__contact::before {

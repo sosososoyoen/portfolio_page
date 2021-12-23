@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
   @include mobile {
+    font-size: 70%;
+  }
+  @include mobile-sm {
     font-size: 50%;
   }
 }
@@ -15,10 +18,6 @@ body {
     rgba(254, 252, 201, 1) 44%,
     rgba(247, 208, 213, 1) 100%
   );
-  // @include mobile {
-  //   min-width: auto;
-  //   width: 100vw;
-  // }
 }
 .scroll_hidden {
   overflow-y: hidden;
@@ -27,7 +26,4 @@ body {
 .wrap-1200 {
   max-width: 1200px;
   margin: 0 auto;
-  @include tablet {
-    max-width: none;
-  }
 }

@@ -3,9 +3,10 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  padding-top: 55rem;
+  padding-top: 7rem;
   @include mobile {
     width: 100vw;
+    height: max-content;
   }
 }
 #header > .container {
@@ -15,13 +16,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @include tablet {
-    padding: 1em;
-  }
   @include mobile {
-    height: auto;
+    position: static;
+    transform: translate(0, 0);
     margin: 0 auto;
-    margin-top: 10%;
   }
 }
 .home-title {
@@ -54,7 +52,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   &::first-letter {
-    font-size: 136px;
+    font-size: 8.5rem;
   }
 }
 .title__second {
@@ -81,13 +79,20 @@
 .title_photo {
   float: right;
   @include mobile {
-    width: fit-content;
+    width: 90%;
     float: none;
+    margin: 0 auto;
+  }
+  img {
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
 .header__column_left {
   @include mobile {
+    width: max-content;
     margin: 0 auto;
   }
 }

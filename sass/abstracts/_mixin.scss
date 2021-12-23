@@ -5,20 +5,24 @@
     @content;
   }
 }
+// @mixin mobile {
+//   @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
+//     @content;
+//   }
+// }
+
 @mixin mobile {
   @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (max-width: #{$breakpoint-desktop - 1px}) {
-    @content;
-  }
-}
+// @mixin desktop {
+//   @media (min-width: #{$breakpoint-desktop}) {
+//     @content;
+//   }
+// }
 
-@mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) {
-    @content;
-  }
+@mixin skillicon($col) {
+  filter: drop-shadow(4px 8px 10px $col);
 }

@@ -9,12 +9,9 @@
     width: 1200px;
     margin: 0 auto;
     @extend %clear;
-    @include tablet {
-      width: auto;
-      padding: 0 3rem;
-    }
     @include mobile {
-      padding: 0 2rem;
+      width: auto;
+      padding: 0 1rem;
     }
   }
 }
@@ -28,7 +25,7 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  @include tablet {
+  @include mobile {
     width: 100%;
     height: 7rem;
     padding: 1rem 0;
@@ -54,12 +51,30 @@
   float: right;
   height: 5rem;
   padding-top: 1.25rem;
-
+  @include mobile {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    position: fixed;
+    float: none;
+    top: -1rem;
+    right: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 7rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
   & > li {
     float: left;
     width: 20%;
     height: 100%;
     vertical-align: baseline;
+    @include mobile {
+      float: none;
+      width: auto;
+      height: auto;
+    }
     &:last-child {
       a {
         margin-right: 0;
@@ -77,11 +92,15 @@
       font-size: 1.25rem;
       margin: 0 1em;
       line-height: 2rem;
-      @include tablet {
-        font-size: 1.7rem;
+      @include mobile {
+        font-size: 2rem;
+        padding: 5rem;
       }
     }
   }
+}
+.close_icon {
+  display: none;
 }
 .marker {
   content: "";
@@ -93,15 +112,19 @@
   height: 3px;
   background-color: $text-purple;
   transition: 0.5s;
-  @include tablet {
-    // display: none;
+  @include mobile {
+    display: none;
   }
 }
 /* nav - toggle btn */
+.nav__checkbox {
+  display: none;
+}
 .nav__toggle-btn {
   font-family: "Material Icons";
   position: absolute;
-  right: 32px;
+  z-index: 5;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   border: none;
@@ -111,7 +134,20 @@
   .material-icons-outlined {
     font-size: 36px;
   }
-  @include tablet {
-    // display: block;
+  @include mobile {
+    display: block;
+  }
+}
+.nav__checkbox:checked ~ .nav__menu {
+  height: 120vh;
+  visibility: visible;
+  opacity: 1;
+}
+.nav__checkbox:checked ~ .nav__toggle-btn {
+  .close_icon {
+    display: block;
+  }
+  .menu_icon {
+    display: none;
   }
 }

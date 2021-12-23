@@ -3,7 +3,7 @@
   width: 14.8rem;
   height: 4.25rem;
   border-radius: 2rem;
-  margin-top: 80px;
+  margin-top: 5rem;
   border: none;
   cursor: pointer;
   background: rgb(159, 139, 224);
@@ -17,17 +17,20 @@
   transition: all 0.4s ease-in-out;
   background-size: 200% 100%;
   @include mobile {
-    margin: 0 auto;
+    margin: 2rem 25% 0 25%;
   }
 }
 .btn_go-to-work > span {
-  line-height: 68px;
+  line-height: 4.25rem;
   font-family: "NEXON Lv2 Gothic";
   color: white;
   letter-spacing: 0.05em;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
   transition: all 0.4s ease-in-out;
+  @include mobile {
+    margin: 0 auto;
+  }
 }
 .btn_hover:hover > span {
   text-shadow: rgba(0, 0, 0, 0.4) 1px 0 10px;
@@ -40,4 +43,36 @@
 .btn_go-to-work:hover {
   transform: translateY(-7%);
   box-shadow: 0 10px 20px 0 rgba(250, 174, 202, 0.5);
+}
+
+// work 버튼
+.work__btn-view {
+  width: 100px;
+  height: 34px;
+  border-radius: 16px;
+  border: none;
+  margin: 0.9em auto;
+  background: rgb(151, 89, 187);
+  background-image: linear-gradient(
+    to right,
+    rgba(246, 175, 151, 1),
+    rgba(252, 166, 198, 1),
+    rgba(151, 89, 187, 1) 70%
+  );
+  background-size: 200% 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: rgba(252, 166, 198, 0.6) 3px 10px 20px 0px;
+  /* 텍스트 */
+  font-family: "NEXON Lv2 Gothic Bold";
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
+  &:hover {
+    box-shadow: rgba(206, 121, 255, 0.5) 3px 10px 20px 0px;
+  }
+  @include mobile {
+    display: inline-block;
+  }
 }

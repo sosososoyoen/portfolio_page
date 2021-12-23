@@ -3,6 +3,9 @@
   transform: translateX(50%);
   height: 350px;
   opacity: 0;
+  @include mobile {
+    height: auto;
+  }
 }
 .box_work:first-child {
   margin-top: 54px;
@@ -14,24 +17,38 @@
   height: 100%;
   float: left;
   padding: 53px 0;
+  @include mobile {
+    float: none;
+    padding: 20px 0;
+  }
 }
 .box_work__row:first-child {
   width: 42%;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .box_work__row:last-child {
   width: 58%;
   position: relative;
+  @include mobile {
+    width: 100%;
+  }
 }
 .work__thumbnail {
   display: block;
   position: relative;
   border-radius: 10px;
-  width: 400px;
-  height: 250px;
+  width: 25rem;
+  height: 15.625rem;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   overflow: hidden;
+  @include mobile {
+    width: calc(25rem * 1.3);
+    height: calc(15.625rem * 1.3);
+  }
 }
 
 .work__thumbnail:hover .work__img_caption {
@@ -75,44 +92,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include mobile {
+    position: static;
+    transform: translate(0, 0);
+    text-align: center;
+  }
 }
 .work__introduction {
   width: 480px;
   margin: 0 auto;
-}
-.work__introduction > h3 {
-  font-family: "NEXON Lv2 Gothic Bold";
-  font-size: 1.875em;
-}
-.work__introduction > ul {
-  margin: 1.2em 0;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.work__btn-view {
-  width: 100px;
-  height: 34px;
-  border-radius: 16px;
-  border: none;
-  margin: 0.9em auto;
-  background: rgb(151, 89, 187);
-  background-image: linear-gradient(
-    to right,
-    rgba(246, 175, 151, 1),
-    rgba(252, 166, 198, 1),
-    rgba(151, 89, 187, 1) 70%
-  );
-  background-size: 200% 100%;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: rgba(252, 166, 198, 0.6) 3px 10px 20px 0px;
-  /* 텍스트 */
-  font-family: "NEXON Lv2 Gothic Bold";
-  color: white;
-  font-size: 17px;
-  letter-spacing: 0.1em;
-  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
-}
-.work__btn-view:hover {
-  box-shadow: rgba(206, 121, 255, 0.5) 3px 10px 20px 0px;
+  @include mobile {
+    width: 100%;
+  }
+  & > h3 {
+    font-family: "NEXON Lv2 Gothic Bold";
+    font-size: 1.875em;
+  }
+  & > ul {
+    margin: 1.2em 0;
+    font-weight: bold;
+    line-height: 1.5;
+  }
 }
