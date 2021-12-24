@@ -2,13 +2,13 @@
 .box_gallery {
   width: 1200px;
   padding: 0 110px;
-  @include mobile {
+  @include tablet {
     width: 100%;
     padding: 0;
   }
 }
 .box_gallery_row {
-  @include mobile {
+  @include tablet {
     width: 100%;
 
     text-align: center;
@@ -27,7 +27,7 @@
   border-radius: 1em;
   background-color: white;
   margin-top: 65px;
-  @include mobile {
+  @include tablet {
     display: inline-block;
     float: none;
     margin-top: 2rem;
@@ -96,6 +96,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    @include tablet {
+      width: 50rem;
+    }
+
     @include mobile {
       width: 40rem;
     }
@@ -118,13 +122,16 @@
 }
 .gallery__big_photo {
   width: 60rem;
+  @include tablet {
+    width: 50rem;
+  }
   @include mobile {
     width: 40rem;
   }
 }
 
 .btn {
-  padding: 4em;
+  padding: 2rem;
   border: none;
   position: absolute;
   top: 50%;
@@ -132,7 +139,8 @@
   cursor: pointer;
   z-index: 5;
   color: var(--text-purple);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
   transition: 0.3s;
   opacity: 0.5;
   @include mobile {
@@ -145,10 +153,10 @@ button.close:hover {
 }
 
 #prev_btn {
-  left: 10%;
+  left: 1rem;
 }
 #next_btn {
-  right: 10%;
+  right: 1rem;
 }
 button.close {
   position: absolute;
@@ -170,22 +178,21 @@ button.close {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-#bullets > li {
-  float: left;
-  margin: 0 8px;
-}
-#bullets > li > a {
-  display: block;
-  text-decoration: none;
-  color: transparent;
-  width: 1em;
-  height: 1em;
-  background-color: rgb(165, 165, 165);
-  border-radius: 50%;
-  transition: 0.2s;
-}
-#bullets > li > a.on {
-  background-color: $text-navy;
+  & > li {
+    float: left;
+    margin: 0 8px;
+    & > a {
+      display: block;
+      text-decoration: none;
+      color: transparent;
+      width: 1em;
+      height: 1em;
+      background-color: rgb(165, 165, 165);
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+    & > a.on {
+      background-color: $text-navy;
+    }
+  }
 }

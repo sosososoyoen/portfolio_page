@@ -2,7 +2,7 @@
 .box_profile {
   height: 700px;
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     height: auto;
   }
 }
@@ -103,6 +103,10 @@
   padding: 3em 0;
   line-height: 1.4;
   opacity: 0;
+  @include tablet {
+    margin-top: 4rem;
+    height: auto;
+  }
   @include mobile {
     width: 100%;
     font-size: 1.5rem;
@@ -132,6 +136,11 @@
   margin-top: 23px;
   padding-top: 3em;
   margin-right: 30px;
+  @include tablet {
+    width: auto;
+    height: auto;
+    margin-top: 4rem;
+  }
   @include mobile {
     width: 100%;
     height: auto;
@@ -139,6 +148,7 @@
     margin: 5rem 0 0 0;
     text-align: center;
     float: none;
+    font-size: 1.5rem;
   }
   & > p {
     display: block;
@@ -148,7 +158,9 @@
     }
     &:not(:first-child) {
       margin-top: 1.2em;
-      margin-left: 1.2em;
+      @include mobile {
+        margin-left: 1.2em;
+      }
     }
   }
 }
@@ -165,11 +177,14 @@
   height: 220px;
   margin-top: 16px;
   float: right;
+  @include tablet {
+    height: auto;
+    margin-top: 5rem;
+    float: left;
+  }
   @include mobile {
     width: 100%;
-    height: auto;
     float: none;
-    margin-top: 5rem;
   }
   & > h3 {
     position: relative;

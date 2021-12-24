@@ -16,6 +16,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include tablet {
+    padding: 1rem;
+  }
   @include mobile {
     position: static;
     transform: translate(0, 0);
@@ -26,6 +29,9 @@
   width: 47%;
   height: 330px;
   float: left;
+  @include tablet {
+    width: max-content;
+  }
   @include mobile {
     width: fit-content;
     float: none;
@@ -78,19 +84,25 @@
 }
 .title_photo {
   float: right;
+  @include tablet {
+    width: 45%;
+  }
   @include mobile {
     width: 90%;
     float: none;
     margin: 0 auto;
   }
   img {
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
   }
 }
 
 .header__column_left {
+  @include tablet {
+    width: 47%;
+  }
   @include mobile {
     width: max-content;
     margin: 0 auto;

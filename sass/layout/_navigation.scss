@@ -9,7 +9,7 @@
     width: 1200px;
     margin: 0 auto;
     @extend %clear;
-    @include mobile {
+    @include tablet {
       width: auto;
       padding: 0 1rem;
     }

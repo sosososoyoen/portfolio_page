@@ -16,6 +16,10 @@
   box-shadow: 0 4px 15px 0 rgba(159, 139, 224, 0.75);
   transition: all 0.4s ease-in-out;
   background-size: 200% 100%;
+  @include tablet {
+    float: left;
+    margin-top: 1rem;
+  }
   @include mobile {
     margin: 2rem 25% 0 25%;
   }

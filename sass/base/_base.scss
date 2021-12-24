@@ -1,5 +1,8 @@
 html {
   scroll-behavior: smooth;
+  @include tablet {
+    font-size: 80%;
+  }
   @include mobile {
     font-size: 70%;
   }
@@ -26,4 +29,7 @@ body {
 .wrap-1200 {
   max-width: 1200px;
   margin: 0 auto;
+  @include tablet {
+    overflow: hidden;
+  }
 }
