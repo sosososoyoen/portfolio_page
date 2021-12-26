@@ -162,7 +162,7 @@ thumbnails.forEach(item=>{
 
 // nav의 인디케이터(marker)의 길이와 위치를 맞추는 함수
 function indicator(e) {
-    marker.style.left = e.offsetLeft+e.offsetWidth-e.offsetWidth/2+"px";
+    marker.style.left = e.offsetLeft+"px";
     marker.style.width = e.offsetWidth+"px";
 }
 
@@ -211,7 +211,7 @@ window.addEventListener("scroll", ()=> {
     // 스크롤에 따라 해당하는 메뉴 밑에 인디케이터가 따라오는 함수
     menus.forEach(menu => {
         menu.classList.remove("current-menu");
-        const href = menu.getAttribute("href").substr(1);
+        const href = menu.getAttribute("href").substring(1);
         if(href === current){
             menu.classList.add("current-menu")
             indicator(menu);

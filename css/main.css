@@ -919,7 +919,6 @@ body {
 
 .nav__menu > li {
   float: left;
-  width: 20%;
   height: 100%;
   vertical-align: baseline;
 }
@@ -967,8 +966,6 @@ body {
   position: absolute;
   bottom: 1.2rem;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   width: 0%;
   height: 3px;
   background-color: #9d5cbb;
