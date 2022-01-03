@@ -14,16 +14,27 @@ const photoCount = bigPhoto.length;
 const duration = 400;
 let bullet = 0;
 
+
+function bulletClassReset() {
+    bullet.forEach(a => {
+        a.classList.remove("on")
+    })
+
+}
+function bulletIndex() {
+    let index = photoIndex + bullet.length;
+    index %= bullet.length;
+    bullet[index].classList.add("on");
+}
 // bullet 생성하는 함수
 function createBullets() {
     const bullets = document.createElement("ul");
     bullets.setAttribute("id","bullets");
     overlay.appendChild(bullets);
-    slides.forEach(_slide => {
-        let index = Array.prototype.indexOf.call(slides,_slide);
+    slides.forEach((slide,index) => {
         const a = document.createElement("a");
         a.setAttribute("href","#");
-        a.innerHTML=`"${index}"`;
+        a.innerHTML=`${index}`;
         const li = document.createElement("li")
         li.appendChild(a);
         bullets.appendChild(li);
@@ -40,12 +51,11 @@ thumbnails.forEach(item => {
         overlay.style.display = "block";
         // 썸네일 원본 사진 링크와 갤러리 슬라이드 이미지 소스 링크 연결
         for (let i=0; i<thumbnails.length; i++) {
-            let thumbnail = thumbnails[i]
-            var photo = thumbnail.lastElementChild;
+            var photo = thumbnails[i].lastElementChild;
             bigPhoto[i].src = photo.href
         };
         });
-        document.querySelector("button.close").addEventListener("click", function (_e) {
+        document.querySelector("button.close").addEventListener("click", ()=> {
             overlay.style.display = "none";
             body.classList.remove("scroll_hidden")
         
@@ -68,10 +78,8 @@ function nextSlideImage() {
         slide.appendChild(slide.firstElementChild);
         slide.removeAttribute("style");
     },duration)
-    bullet.forEach(item=>{
-        item.classList.remove("on")
-    });
-    bullet[photoIndex].classList.add("on");
+    bulletClassReset();
+    bulletIndex()
 }
 // 이전 사진으로 슬라이드
 function prevSlideImage() {
@@ -83,26 +91,43 @@ function prevSlideImage() {
     window.setTimeout(function(){ 
         slide.style.left = 0;
         slide.style.transition = duration+"ms";
-    },"200ms")
-    bullet.forEach(item=>{
-        item.classList.remove("on")
-    });
-    let index = photoIndex + bullet.length;
-    index %= bullet.length;
-    bullet[index].classList.add("on");
+    },duration/2)
+    bulletClassReset();
+    bulletIndex()
 }
-
+function sliceSlides(step) {
+    // 클릭할 때마다 순서가 바뀌는 slides들 업뎃
+    slides = document.querySelectorAll(".slides>li");
+    let currentSlides = [...slides];
+    if (step > 0) {
+      // 이미지 슬라이드 step의 수 만큼 앞에서 자른다
+      let sliceSlides = currentSlides.slice(undefined, step);
+      slide.style.transition = duration + "ms";
+      slide.style.left = step * -100 + "%";
+      window.setTimeout(() => {
+        slide.removeAttribute("style");
+        // 잘린 슬라이드들 맨 뒤로 집어넣기..
+        slide.append(...sliceSlides);
+      });
+    } else {
+      sliceSlides = currentSlides.slice(step);
+      // 잘린 슬라이드들 맨 앞으로 집어넣기
+      slide.prepend(...sliceSlides);
+      slide.style.left = step * 100 + "%";
+      slide.style.transition = duration + "ms";
+      window.setTimeout(() => {
+        slide.removeAttribute("style");
+      }, duration);
+    }
+}
 //bullet을 클릭하면 해당하는 번호의 이미지로 슬라이드 되는 함수
 bullet.forEach((a,index)=>{
     a.addEventListener("click", function(e){
         e.preventDefault();
-        // let index = Array.prototype.indexOf.call(bullet,a);
         const clickedIndex = index;
         let step = clickedIndex - photoIndex;
         photoIndex = clickedIndex;
-        for (let i=0; i<bullet.length; i++) {
-            bullet[i].classList.remove("on");
-        }
+        bulletClassReset();
         this.classList.add("on");
         slides = document.querySelectorAll("#slide>li");
         let slidesArr = [...slides];
@@ -110,7 +135,7 @@ bullet.forEach((a,index)=>{
         if (step>0) {
             let sliceSlides = slidesArr.slice(undefined,step);
             slide.style.transition = duration+"ms";
-            slide.style.left=step * (-100)+"%";
+            slide.style.left=step * -100+"%";
             window.setTimeout(function(){ 
                 slide.removeAttribute("style");
                 slide.append(...sliceSlides);
@@ -129,16 +154,13 @@ bullet.forEach((a,index)=>{
     })
 })
 //썸네일 클릭하면 해당되는 사진으로 점프
-thumbnails.forEach(item=>{
+thumbnails.forEach((item,index)=>{
     item.addEventListener("click", function(e){
         e.preventDefault();
-        let index = Array.prototype.indexOf.call(thumbnails,item);
         const clickedIndex = index;
         let step = clickedIndex - photoIndex;
         photoIndex = clickedIndex;
-        for (let i=0; i<bullet.length; i++) {
-            bullet[i].classList.remove("on");
-        }
+        bulletClassReset();
         bullet[index].classList.add("on");
         slides = document.querySelectorAll("#slide>li");
         let slidesArr = [...slides];
