@@ -104,7 +104,7 @@ bullet.forEach((a,index)=>{
         let step = clickedIndex - photoIndex;
         photoIndex = clickedIndex;
         bulletClassReset();
-        this.classList.add("on");
+        a.classList.add("on");
         slides = document.querySelectorAll("#slide>li");
         let slidesArr = [...slides];
 
@@ -121,11 +121,10 @@ bullet.forEach((a,index)=>{
             sliceSlides = slidesArr.slice(step);
             slide.prepend(...sliceSlides);
             slide.style.left = step * 100 + "%";
-            slide.style.transition = duration+"ms";
             window.setTimeout(()=>{ 
                 slide.style.left = 0;
-                slide.style.transition = "0ms";
-            },duration)
+                slide.style.transition = duration+"ms";
+            },)
         }
     })
 })
