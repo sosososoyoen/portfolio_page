@@ -1,5 +1,6 @@
 # Portfolio Page
-
+보러가기
+https://soonmac.github.io/portfolio_page/
  ## 이미지
  데스크탑
  ![메인페이지](cap_01.PNG)
@@ -47,7 +48,7 @@
 * 이전, 다음 슬라이드로 넘어가는 버튼
 * 무한 슬라이드
   
-  
+
 📎관련 작성글(코드 설명) :https://velog.io/@soonmac/%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%ED%81%B4%EB%A6%AD%ED%95%98%EB%A9%B4-%EB%82%98%EC%98%A4%EB%8A%94-%ED%8C%9D%EC%97%85-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EB%B0%94%EB%8B%90%EB%9D%BCJS
 
 ## 반응형 웹페이지
