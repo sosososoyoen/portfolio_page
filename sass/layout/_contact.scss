@@ -57,7 +57,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
+  width: 320px;
   text-align: center;
   opacity: 0;
   @include mobile {
@@ -103,7 +103,7 @@
     }
   }
 }
-.sns__column:last-child {
+.sns__column:not(:first-child) {
   margin-left: 2rem;
 }
 .address__subtitle {
