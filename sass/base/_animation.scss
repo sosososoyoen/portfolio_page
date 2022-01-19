@@ -50,7 +50,7 @@
 @keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    filter: blur(8px);
+    filter: blur(3px);
     opacity: 0;
   }
   100% {
@@ -60,7 +60,7 @@
 }
 .tracking-in-contract {
   animation: tracking-in-contract 0.8s ease-in-out both;
-  animation-delay: 1s;
+  animation-delay: 1.3s;
 }
 @keyframes tracking-in-contract {
   0% {

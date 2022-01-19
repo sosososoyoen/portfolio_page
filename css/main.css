@@ -383,8 +383,8 @@ body {
 @-webkit-keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
     opacity: 0;
   }
   100% {
@@ -397,8 +397,8 @@ body {
 @keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
     opacity: 0;
   }
   100% {
@@ -411,8 +411,8 @@ body {
 .tracking-in-contract {
   -webkit-animation: tracking-in-contract 0.8s ease-in-out both;
           animation: tracking-in-contract 0.8s ease-in-out both;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
 
 @-webkit-keyframes tracking-in-contract {
