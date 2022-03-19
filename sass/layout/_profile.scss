@@ -263,5 +263,8 @@
     &:nth-child(9) > img:hover {
       @include skillicon(rgba(255, 188, 233, 0.7));
     }
+    &:nth-child(10) > img:hover {
+      @include skillicon(rgba(0, 140, 255, 0.7));
+    }
   }
 }
