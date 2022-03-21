@@ -1755,8 +1755,6 @@ button.close {
 
 .profile__skill {
   width: 470px;
-  height: 220px;
-  margin-top: 16px;
   float: right;
 }
 
@@ -1783,6 +1781,7 @@ button.close {
   font-family: "SBAggroB";
   font-size: 18px;
   line-height: 1.2;
+  margin-top: 16px;
 }
 
 @media screen and (max-width: 757px) {
@@ -1820,6 +1819,26 @@ button.close {
     padding: 2rem;
     text-align: center;
   }
+}
+
+.profile__skill-icon:last-child > li:nth-child(1) > img:hover {
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(117, 211, 255, 0.5));
+          filter: drop-shadow(4px 8px 10px rgba(117, 211, 255, 0.5));
+}
+
+.profile__skill-icon:last-child > li:nth-child(2) > img:hover {
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(182, 8, 8, 0.5));
+          filter: drop-shadow(4px 8px 10px rgba(182, 8, 8, 0.5));
+}
+
+.profile__skill-icon:last-child > li:nth-child(3) > img:hover {
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(43, 149, 151, 0.5));
+          filter: drop-shadow(4px 8px 10px rgba(43, 149, 151, 0.5));
+}
+
+.profile__skill-icon:last-child > li:nth-child(4) > img:hover {
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(70, 3, 3, 0.7));
+          filter: drop-shadow(4px 8px 10px rgba(70, 3, 3, 0.7));
 }
 
 .profile__skill-icon > li {
@@ -1863,33 +1882,23 @@ button.close {
 }
 
 .profile__skill-icon > li:nth-child(4) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(86, 139, 173, 0.5));
-          filter: drop-shadow(4px 8px 10px rgba(86, 139, 173, 0.5));
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(0, 140, 255, 0.7));
+          filter: drop-shadow(4px 8px 10px rgba(0, 140, 255, 0.7));
 }
 
 .profile__skill-icon > li:nth-child(5) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(86, 140, 174, 0.7));
-          filter: drop-shadow(4px 8px 10px rgba(86, 140, 174, 0.7));
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(255, 176, 176, 0.7));
+          filter: drop-shadow(4px 8px 10px rgba(255, 176, 176, 0.7));
 }
 
 .profile__skill-icon > li:nth-child(6) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(182, 8, 8, 0.5));
-          filter: drop-shadow(4px 8px 10px rgba(182, 8, 8, 0.5));
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(117, 211, 255, 0.5));
+          filter: drop-shadow(4px 8px 10px rgba(117, 211, 255, 0.5));
 }
 
 .profile__skill-icon > li:nth-child(7) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(43, 149, 151, 0.5));
-          filter: drop-shadow(4px 8px 10px rgba(43, 149, 151, 0.5));
-}
-
-.profile__skill-icon > li:nth-child(8) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(70, 3, 3, 0.7));
-          filter: drop-shadow(4px 8px 10px rgba(70, 3, 3, 0.7));
-}
-
-.profile__skill-icon > li:nth-child(9) > img:hover {
-  -webkit-filter: drop-shadow(4px 8px 10px rgba(255, 188, 233, 0.7));
-          filter: drop-shadow(4px 8px 10px rgba(255, 188, 233, 0.7));
+  -webkit-filter: drop-shadow(4px 8px 10px rgba(116, 192, 255, 0.7));
+          filter: drop-shadow(4px 8px 10px rgba(116, 192, 255, 0.7));
 }
 
 /* work */
