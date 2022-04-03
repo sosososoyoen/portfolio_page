@@ -54,7 +54,7 @@
             <hgroup class="home-title">
               <h2 class="main-title title__first">Design</h2>
               <h2 class="main-title title__second">Growth.</h2>
-              <h1 class="sub-title">항상 배움의 자세로 성장하는 퍼블리셔</h1>
+              <h1 class="sub-title">항상 배움의 자세로 성장하는 웹 개발자</h1>
             </hgroup>
             <button
               class="btn_go-to-work btn_hover"
@@ -81,7 +81,7 @@
               <div class="profile__headline">
                 <span class="greeting">
                   안녕하세요.<br />
-                  신입 웹 퍼블리셔<br />
+                  신입 웹 개발자<br />
                   이소연입니다.
                 </span>
               </div>
@@ -93,7 +93,7 @@
                 어떤 분야든 배움에는 끝이 없습니다. <br />
                 겸손의 자세로 배움을 게을리하지 않고,<br />
                 빠르게 변화하는 트렌드에 맞춰 발전하는<br />
-                웹 퍼블리셔가 되겠습니다.
+                프론트엔드 개발자가 되겠습니다.
               </div>
               <div class="profile__info">
                 <p>
@@ -124,25 +124,28 @@
                     <img src="./img/skill_icon_04.png" alt="제이쿼리_아이콘" />
                   </li>
                   <li>
+                    <img src="./img/skill_icon_09.png" alt="scss_아이콘" />
+                  </li>
+                  <li>
+                    <img src="./img/skill_icon_10.png" alt="react_아이콘" />
+                  </li>
+                  <li>
+                    <img src="./img/skill_icon_11.png" alt="타입스크립트_아이콘" />
+                  </li>
+                </ul>
+                <h3>Graphics</h3>
+                <ul class="profile__skill-icon">
+                  <li>
                     <img src="./img/skill_icon_05.png" alt="포토샵_아이콘" />
                   </li>
                   <li>
-                    <img
-                      src="./img/skill_icon_06.png"
-                      alt="일러스트레이터_아이콘"
-                    />
+                    <img src="./img/skill_icon_06.png" alt="일러스트레이터_아이콘" />
                   </li>
                   <li>
                     <img src="./img/skill_icon_07.png" alt="마야_아이콘" />
                   </li>
                   <li>
                     <img src="./img/skill_icon_08.png" alt="블렌더_아이콘" />
-                  </li>
-                  <li>
-                    <img src="./img/skill_icon_09.png" alt="scss_아이콘" />
-                  </li>
-                  <li>
-                    <img src="./img/skill_icon_10.png" alt="react_아이콘" />
                   </li>
                 </ul>
               </div>
@@ -153,6 +156,48 @@
         <!-- work -->
         <section class="category-section section-flag" id="work">
           <h2 class="category-title">Work</h2>
+          <div class="box-component box_work">
+            <figure class="box_work__row">
+              <a
+                class="work__thumbnail"
+                href="https://github.com/soonmac/nexflix-clone"
+              >
+                <div class="work__img_caption">
+                  <span class="caption">
+                    GitHub 페이지로 가기
+                    <span class="material-icons"> open_in_new </span>
+                  </span>
+                </div>
+                <img
+                  class="work__thumbnail_img"
+                  src="./img/work_thumb_02.png"
+                  alt="넷플릭스 클론"
+                />
+              </a>
+            </figure>
+            <div class="box_work__row">
+              <div class="work__info">
+                <div class="work__introduction">
+                  <h3>넷플릭스 클론</h3>
+                  <ul>
+                    <li>사용 언어 : React, TypeScript</li>
+                    <li>
+                      주요 기능: react-query를 이용한 데이터 fetch, 검색기능
+                      구현, framer-motion을 이용한 슬라이드, 모달창 등
+                    </li>
+                    <li>참여도 : 100&#37;</li>
+                  </ul>
+                </div>
+                <button
+                  class="btn_hover work__btn-view"
+                  onclick="window.open('https://soonmac.github.io/nexflix-clone/')"
+                >
+                  VIEW
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- 2. box_work -->
           <div class="box-component box_work">
             <figure class="box_work__row">
               <a
@@ -196,7 +241,7 @@
             <figure class="box_work__row">
               <a
                 class="work__thumbnail"
-                href="https://github.com/soonmac/nexflix-clone"
+                href="https://github.com/soonmac/react-todolist"
               >
                 <div class="work__img_caption">
                   <span class="caption">
@@ -206,34 +251,31 @@
                 </div>
                 <img
                   class="work__thumbnail_img"
-                  src="./img/work_thumb_02.png"
-                  alt="그리너 홈페이지 리뉴얼"
+                  src="./img/work_thumb_05.png"
+                  alt="투두리스트"
                 />
               </a>
             </figure>
             <div class="box_work__row">
               <div class="work__info">
                 <div class="work__introduction">
-                  <h3>넷플릭스 클론</h3>
+                  <h3>일정 관리 앱</h3>
                   <ul>
-                    <li>사용 언어 : React, TypeScript</li>
-                    <li>
-                      주요 기능: react-query를 이용한 데이터 fetch, 검색기능
-                      구현, framer-motion을 이용한 슬라이드, 모달창 등
-                    </li>
+                    <li>사용 언어 :React, SCSS</li>
+                    <li>주요 기능: 간단한 CRUD 기능</li>
                     <li>참여도 : 100&#37;</li>
                   </ul>
                 </div>
                 <button
                   class="btn_hover work__btn-view"
-                  onclick="window.open('https://soonmac.github.io/nexflix-clone/')"
+                  onclick="window.open('https://soonmac.github.io/react-todolist')"
                 >
                   VIEW
                 </button>
               </div>
             </div>
           </div>
-          <!-- 2. box_work -->
+          <!-- 5. box_work -->
           <div class="box-component box_work">
             <figure class="box_work__row">
               <a
@@ -318,45 +360,7 @@
             </div>
           </div>
           <!-- 4. box_work -->
-          <div class="box-component box_work">
-            <figure class="box_work__row">
-              <a
-                class="work__thumbnail"
-                href="https://github.com/soonmac/react-todolist"
-              >
-                <div class="work__img_caption">
-                  <span class="caption">
-                    GitHub 페이지로 가기
-                    <span class="material-icons"> open_in_new </span>
-                  </span>
-                </div>
-                <img
-                  class="work__thumbnail_img"
-                  src="./img/work_thumb_05.png"
-                  alt="카카오톡 클론코딩"
-                />
-              </a>
-            </figure>
-            <div class="box_work__row">
-              <div class="work__info">
-                <div class="work__introduction">
-                  <h3>일정 관리 앱</h3>
-                  <ul>
-                    <li>사용 언어 :React, SCSS</li>
-                    <li>주요 기능: 간단한 CRUD 기능</li>
-                    <li>참여도 : 100&#37;</li>
-                  </ul>
-                </div>
-                <button
-                  class="btn_hover work__btn-view"
-                  onclick="window.open('https://soonmac.github.io/react-todolist')"
-                >
-                  VIEW
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- 5. box_work -->
+
         </section>
         <!-- gallery -->
         <section class="category-section section-flag" id="gallery">
